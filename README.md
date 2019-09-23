@@ -70,11 +70,11 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 
 <a id="guidelines"></a>
 
-1. Install Python
-2. Install PyCharm
-3. Configure Python virtual environment and activate it
-4. Install Python prerequisites/packages
-5. Setup REST API app
+ 1. Install Python
+ 2. Install PyCharm
+ 3. Configure Python virtual environment and activate it
+ 4. Install Python prerequisites/packages
+ 5. Setup REST API app
 
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
