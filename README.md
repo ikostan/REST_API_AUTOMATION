@@ -36,8 +36,8 @@
 - [Flask](https://www.fullstackpython.com/flask.html)
 
 
-<a id="additional_tech_info_resources">
 **Additional Tech Info Resources:**<br/>
+<a id="additional_tech_info_resources">
 
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
