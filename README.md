@@ -1,5 +1,7 @@
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a3c971aa10e4e93b15944480cbf9b15)](https://www.codacy.com/manual/ikostan/REST_API_AUTOMATION?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ikostan/REST_API_AUTOMATION&amp;utm_campaign=Badge_Grade)
+[![Job Status](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/status?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/jobs/github.com/ikostan/REST_API_AUTOMATION/latest?completed=true&branch=master)
+[![Report](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/report?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/reports/github.com/ikostan/REST_API_AUTOMATION/branch/master/summary)
 
 # Practice REST API automation with Python 3
 An API, or Application Program Interface, enables developers to integrate one app with another. To use an API, you make a request to a remote web server, and retrieve the data you need. Test Automation for APIs is needed to eliminate any possible errors, detect defects early, and ensure quality through the application development cycle. In this project, we’ll take a look at the automating API tests using Python.
