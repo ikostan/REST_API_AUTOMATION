@@ -3,7 +3,7 @@
 
 # <i class="fab fa-python"></i>Practice REST API automation with Python 3
 
-### Table of Contents:<br/>
+## Table of Contents:<br/>
 
 1. <a href="#main_objectives">Main Objectives</a><br>
 2. <a href="#official_documentation_sources">Official Documentation Sources</a><br>
