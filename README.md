@@ -124,7 +124,6 @@ If everything goes right, you should see an output similar to the following:
 4. The Python interpreter name specified in the **Name** field, becomes visible in the list of available interpreters. Click **OK** to apply the changes.<br/>
 
 For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
-
 </details>
 
 
@@ -167,25 +166,18 @@ pip install virtualenv
 ```bash 
 virtualenv venv --python=python
 ```
-    
 </details>
 
-
 <details>
-  
   <summary><b>Activate Virtual Environment</b></summary>
 
-  <br/>
-  In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
-  <br/><br/>
+In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
 
  1. Open Terminal
  2. Run: \path\to\env\Scripts\activate 
   
 [Source](https://pypi.org/project/virtualenv/1.8.2/)
-  
 </details>
-
 
 <details>
   <summary><b>Auto generate requirements.txt</b></summary>
@@ -205,18 +197,14 @@ pip install -r requirements.txt
 [Source](https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
 </details>
 
-
 <details>
-  
   <summary><b>error: RPC failed; curl 56 Recv failure: Connection was reset</b></summary>
   <br/>
   1. Open Git Bash<br/>
   2. Run: "git config --global http.postBuffer 157286400" 
   
 [Source](https://stackoverflow.com/questions/36940425/gitlab-push-failed-error)
-  
 </details>
-
 
 <details>
   <summary><b>How to fix in case .gitignore is ignored by Git</b></summary>
@@ -227,10 +215,9 @@ pip install -r requirements.txt
     - First commit your current changes, or you will lose them.<br/> 
     - Then run the following commands from the top folder of your Git repository:<br/> 
     
-   ```bash 
-    git rm -r --cached .
-    git add .
-    git commit -m "fixed untracked files"
-   ```
-    
+```bash 
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+```
 </details>
