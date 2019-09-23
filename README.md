@@ -6,18 +6,18 @@ An API, or Application Program Interface, enables developers to integrate one ap
 
 ## Table of Contents:<br/>
 
-1. <a href="#main_objectives">Main Objectives</a><br>
-2. <a href="#official_documentation_sources">Official Documentation Sources</a><br>
-3. <a href="#additional_tech_info_resources">Additional Tech Info Resources</a><br>
-4. <a href="#dev_env">Dev Environment</a><br>
-5. <a href="#tools">Nice to have tools</a><br>
-6. <a href="#about">About REST API app</a><br>
-7. <a href="#setup">REST API app setup</a><br>
-8. <a href="#endpoints">API endpoints and examples</a><br>
-9. <a href="#guidelines">General guidelines: How to set up dev environment</a><br>
-10. <a href="#tech_issues">Tech Issues and Problem Solving</a><br>
-11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a><br>
-12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/><br>
+1. <a href="#main_objectives">Main Objectives</a>
+2. <a href="#official_documentation_sources">Official Documentation Sources</a>
+3. <a href="#additional_tech_info_resources">Additional Tech Info Resources</a>
+4. <a href="#dev_env">Dev Environment</a>
+5. <a href="#tools">Nice to have tools</a>
+6. <a href="#about">About REST API app</a>
+7. <a href="#setup">REST API app setup</a>
+8. <a href="#endpoints">API endpoints and examples</a>
+9. <a href="#guidelines">General guidelines: How to set up dev environment</a>
+10. <a href="#tech_issues">Tech Issues and Problem Solving</a>
+11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
+12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a>
 
 ### Main Objectives:<br/>
 <a id="main_objectives"></a>
@@ -64,17 +64,17 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 ### Nice to have tools
 <a id="tools"></a>
 
- 1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
- 2. [Kite: Code Faster in Python](https://kite.com/)
+1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
+2. [Kite: Code Faster in Python](https://kite.com/)
 
 ### General guidelines: How to set up dev environment.<br/>
 <a id="guidelines"></a>
 
- 1. Install Python
- 2. Install PyCharm
- 3. Configure Python virtual environment and activate it
- 4. Install Python prerequisites/packages
- 5. Setup REST API app
+1. Install Python
+2. Install PyCharm
+3. Configure Python virtual environment and activate it
+4. Install Python prerequisites/packages
+5. Setup REST API app
 
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
@@ -85,10 +85,10 @@ This REST application written in Python was built to help testers learn to write
 ### REST API app setup
 <a id="setup"></a>
 
- 1. In your terminal prompt, pip install flask
- 2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py
- 3. In your terminal prompt, cd directory_that_has_cars_app_py
- 4. In your terminal prompt, python cars_app.py
+1. In your terminal prompt, pip install flask
+2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py
+3. In your terminal prompt, cd directory_that_has_cars_app_py
+4. In your terminal prompt, python cars_app.py
 
 If everything goes right, you should see an output similar to the following:
 ```bash
@@ -143,19 +143,14 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
 1. open CMD<br/>
 2. navigate to project directory, for example:<br/> 
-
 ```bash
 cd C:\Users\superadmin\Desktop\Python\CodinGame
 ```
-
 3. run following command:<br/> 
-
 ```bash 
 pip install virtualenv
 ```
-
 4. run following command:<br/> 
-
 ```bash 
 virtualenv venv --python=python
 ```
@@ -166,8 +161,8 @@ virtualenv venv --python=python
 
 In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
 
- 1. Open Terminal
- 2. Run: \path\to\env\Scripts\activate 
+1. Open Terminal
+2. Run: \path\to\env\Scripts\activate 
   
 [Source](https://pypi.org/project/virtualenv/1.8.2/)
 </details>
@@ -192,8 +187,8 @@ pip install -r requirements.txt
 <details>
   <summary><b>error: RPC failed; curl 56 Recv failure: Connection was reset</b></summary>
 
-  1. Open Git Bash<br/>
-  2. Run: "git config --global http.postBuffer 157286400" 
+1. Open Git Bash<br/>
+2. Run: "git config --global http.postBuffer 157286400" 
   
 [Source](https://stackoverflow.com/questions/36940425/gitlab-push-failed-error)
 </details>
