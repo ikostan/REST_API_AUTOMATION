@@ -56,10 +56,10 @@
 - [GitHub Desktop 2.1.2](https://desktop.github.com/)
 - [GIT 2.22.0.windows.1](https://git-scm.com/download/win)
 
-### Python Packages:<br/>
+### Python Packages
 Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMATION/blob/master/requirements.txt)
 
-### Nice to have tools:
+### Nice to have tools
 
 <a id="tools"></a>
 
@@ -70,11 +70,11 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 
 <a id="guidelines"></a>
 
- 1. Install Python
- 2. Install PyCharm
- 3. Configure Python virtual environment and activate it
- 4. Install Python prerequisites/packages
- 5. Setup REST API app
+1. Install Python
+2. Install PyCharm
+3. Configure Python virtual environment and activate it
+4. Install Python prerequisites/packages
+5. Setup REST API app
 
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
@@ -92,7 +92,7 @@ This REST application written in Python was built to help testers learn to write
  4. In your terminal prompt, python cars_app.py
 
 If everything goes right, you should see an output similar to the following:
-```
+```bash
 * Serving Flask app "cars_app" (lazy loading)
 * Environment: production
   WARNING: This is a development server. Do not use it in a production deployment.
