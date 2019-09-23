@@ -11,7 +11,7 @@
  5. <a href="#tools">Nice to have tools</a>
  6. <a href="#about">About REST API app</a>
   7. <a href="#setup">REST API app setup</a>
- 8. <a href="#endpoints">API endpoints and examples</a>
+  8. <a href="#endpoints">API endpoints and examples</a>
  9. <a href="#guidelines">General guidelines: How to set up dev environment</a>
  10. <a href="#tech_issues">Tech Issues and Problem Solving</a>
  11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
@@ -23,9 +23,9 @@
 
 - Creating REST API Automation
 - Build fast and readable automation using minimal code
-- Industry-ready test structure
-- Build readable test report using Allure Framework
-- Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
+ - Industry-ready test structure
+ - Build readable test report using Allure Framework
+ - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
 
 ### Official Documentation Sources:<br/>
