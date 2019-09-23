@@ -65,9 +65,22 @@ Full list of dependencies see [here.]()
 2. Install PyCharm<br/>
 3. Configure Python virtual environment and activate it<br/>
 4. Install Python prerequisites/packages<br/>
+5. Setup REST API app
 
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
+
+### REST API app setup
+
+1. In your terminal prompt, pip install flask<br/>
+2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py<br/>
+3. In your terminal prompt, cd directory_that_has_cars_app_py<br/>
+4. In your terminal prompt, python cars_app.py<br/>
+
+If everything goes right, you should see an output similar to the following image:
+```python
+
+```
 
 ### Tech Issues and Problem Solving:<br/>
 <a id="tech_issues"></a>
