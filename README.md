@@ -16,8 +16,6 @@ An API, or Application Program Interface, enables developers to integrate one ap
 8. <a href="#endpoints">API endpoints and examples</a>
 9. <a href="#guidelines">General guidelines: How to set up dev environment</a>
 10. <a href="#tech_issues">Tech Issues and Problem Solving</a>
-11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
-12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a>
 
 ### Main Objectives:<br/>
 <a id="main_objectives"></a>
