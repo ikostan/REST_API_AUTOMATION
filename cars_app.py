@@ -10,7 +10,7 @@ IMPORTANT DISCLAIMER: The code here does not reflect Qxf2's coding standards and
 import os
 from functools import wraps
 import logging
-import random
+from random import SystemRandom
 import flask
 from flask import Flask, request, jsonify, abort, render_template
 
@@ -200,8 +200,12 @@ def register_car():
         'customer_name': request.json['customer_name'],
         'city': request.json['city']
     }
+    # create a random number that is cryptographically secure in python
+    # Source: https://stackoverflow.com/questions/20936993/
+    # how-can-i-create-a-random-number-that-is-cryptographically-secure-in-python
+    cryptogen = SystemRandom()
     registered_car = {'car': car[0], 'customer_details': request.json,
-                      'registration_token': random.randrange(0, 4), 'successful': True}
+                      'registration_token': cryptogen.randrange(0, 4), 'successful': True}
     registered_cars.append(registered_car)
 
     return jsonify({'registered_car': registered_car})
