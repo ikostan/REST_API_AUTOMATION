@@ -9,10 +9,13 @@
 3. <a href="#additional_tech_info_resources">Additional Tech Info Resources</a>
 4. <a href="#dev_env">Dev Environment</a>
 5. <a href="#tools">Nice to have tools</a>
-6. <a href="#guidelines">General guidelines: How to set up dev environment</a>
-7. <a href="#tech_issues">Tech Issues and Problem Solving</a>
-8. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
-9. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/>
+6. <a href="#about">About REST API app</a>
+7. <a href="#setup">REST API app setup</a>
+8. <a href="#endpoints">API endpoints and examples</a>
+9. <a href="#guidelines">General guidelines: How to set up dev environment</a>
+10. <a href="#tech_issues">Tech Issues and Problem Solving</a>
+11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
+12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/>
 
 
 ### Main Objectives:<br/>
@@ -72,12 +75,12 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 
 
 ### About REST API app
-
+<a id="about"></a>
 This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by [Qxf2 Services](https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai).
 
 
 ### REST API app setup
-
+<a id="setup"></a>
  1. In your terminal prompt, pip install flask
  2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py
  3. In your terminal prompt, cd directory_that_has_cars_app_py
@@ -96,6 +99,9 @@ If everything goes right, you should see an output similar to the following:
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
+
+### API endpoints and examples
+<a id="endpoints"></a>
 
 ### Tech Issues and Problem Solving:<br/>
 <a id="tech_issues"></a>
