@@ -10,7 +10,7 @@
  4. <a href="#dev_env">Dev Environment</a>
  5. <a href="#tools">Nice to have tools</a>
  6. <a href="#about">About REST API app</a>
- 7. <a href="#setup">REST API app setup</a>
+  7. <a href="#setup">REST API app setup</a>
  8. <a href="#endpoints">API endpoints and examples</a>
  9. <a href="#guidelines">General guidelines: How to set up dev environment</a>
  10. <a href="#tech_issues">Tech Issues and Problem Solving</a>
