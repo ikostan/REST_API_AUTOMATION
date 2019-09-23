@@ -1,4 +1,4 @@
-'''
+"""
 cars api is a sample web application developed by Qxf2 Services
 to help testers learn API automation.
 
@@ -16,8 +16,7 @@ to help you write role based API tests.
 
 IMPORTANT DISCLAIMER: The code here does not reflect
 Qxf2's coding standards and practices.
-'''
-
+"""
 
 import os
 from functools import wraps
@@ -28,10 +27,11 @@ from flask import Flask, request, jsonify, abort, render_template
 
 
 app = Flask(__name__)
-'''
+"""
 write logs for app
 filehandler of logging  module is not creating log directory if dir does not exist
-'''
+"""
+
 if not os.path.exists('log'):
     os.makedirs('log')
 file_handler = logging.FileHandler('log/app.log')
@@ -137,7 +137,8 @@ def get_car():
     """this will help test GET with url params"""
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
-    if car_name != "" and car_name is not None and brand != "" and brand is not None:
+    if car_name != "" and car_name is not None \
+            and brand != "" and brand is not None:
         car = [car for car in cars_list if car['name'] == car_name]
         if len(car) == 0:
             resp = jsonify({'message': 'No car found',
@@ -155,7 +156,7 @@ def get_car():
 @requires_auth
 def add_car():
     """this will help test POST without url params"""
-    if not request.json or not 'name' in request.json:
+    if not request.json or 'name' not in request.json:
         resp = jsonify({'message': 'Not a json', 'successful': False, }), 400
     car = {
         'name': request.json['name'],
@@ -176,7 +177,7 @@ def update_car(name):
     resp = {}
     car = [car for car in cars_list if car['name'] == name]
     if len(car) != 0:
-        if not request.json or not 'name' in request.json:
+        if not request.json or 'name' not in request.json:
             resp['message'], resp['successful'] = 'Not a json'
             status_code = 404
         else:
@@ -212,7 +213,8 @@ def register_car():
     """this will help test GET and POST with dynamic numbers in url"""
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
-    if car_name != "" and car_name is not None and brand != "" and brand is not None:
+    if car_name != "" and car_name is not None \
+            and brand != "" and brand is not None:
         car = [car for car in cars_list if car['name'] == car_name]
     customer_details = {
         'customer_name': request.json['customer_name'],
@@ -260,7 +262,8 @@ def get_user_list():
     "return user list if the given authenticated user has admin permission"
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
-    return jsonify({'message': 'You are not permitted to access this resource', 'successful': False}), 403
+    return jsonify({'message': 'You are not permitted to access this resource',
+                    'successful': False}), 403
 
 
 if __name__ == "__main__":
