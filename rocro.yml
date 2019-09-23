@@ -1,0 +1,7 @@
+inspecode:
+  experimental:
+    runtime:
+      python: 3.7.0
+  pycodestyle: default
+  pylint: default
+  pytest: default
