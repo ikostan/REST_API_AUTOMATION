@@ -184,8 +184,8 @@ virtualenv venv --python=python
   In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
   <br/><br/>
 
-1. Open Terminal
-2. Run: \path\to\env\Scripts\activate 
+ 1. Open Terminal
+ 2. Run: \path\to\env\Scripts\activate 
   
   <br/>Source: https://pypi.org/project/virtualenv/1.8.2/
   
