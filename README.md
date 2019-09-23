@@ -17,7 +17,6 @@
 11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
 12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/>
 
-
 ### Main Objectives:<br/>
 
 <a id="main_objectives"></a>
@@ -27,7 +26,6 @@
 - Build readable test report using Allure Framework
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
-
 
 ### Official Documentation Sources:<br/>
 
@@ -45,7 +43,6 @@
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
 - [Allure Framework](https://docs.qameta.io/allure/)
 
-
 ### Dev Environment:<br/>
 
 <a id="dev_env"></a>
@@ -56,17 +53,14 @@
 - [GitHub Desktop 2.1.2](https://desktop.github.com/)
 - [GIT 2.22.0.windows.1](https://git-scm.com/download/win)
 
-
 ### Python Packages:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMATION/blob/master/requirements.txt)
-
 
 ### Nice to have tools:
 
 <a id="tools"></a>
  1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
  2. [Kite: Code Faster in Python](https://kite.com/)
-
 
 ### General guidelines: How to set up dev environment.<br/>
 
@@ -79,12 +73,10 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
-
 ### About REST API app
 
 <a id="about"></a>
 This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by [Qxf2 Services](https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai).
-
 
 ### REST API app setup
 
@@ -107,12 +99,10 @@ If everything goes right, you should see an output similar to the following:
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-
 ### API endpoints and examples
 
 <a id="endpoints"></a>
 - TBD
-
 
 ### Tech Issues and Problem Solving:<br/>
 
