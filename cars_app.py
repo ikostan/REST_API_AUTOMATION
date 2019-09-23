@@ -56,7 +56,7 @@ registered_cars = []
 
 
 def check_auth(username, password):
-    "check if the given is valid"
+    """check if the given is valid"""
     user = [user for user in user_list if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
@@ -65,7 +65,7 @@ def check_auth(username, password):
 
 
 def authenticate_error(auth_flag):
-    "set auth message based on the authentication check result"
+    """set auth message based on the authentication check result"""
     if auth_flag is True:
         message = {'message': "Authenticate with proper credentials"}
     else:
@@ -79,7 +79,7 @@ def authenticate_error(auth_flag):
 
 
 def requires_auth(f):
-    "verify given user authentication details"
+    """verify given user authentication details"""
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.authorization
@@ -96,7 +96,7 @@ def requires_auth(f):
 
 
 def requires_perm():
-    "check if the autheticated user has a admin permission"
+    """check if the authenticated user has a admin permission"""
     auth = request.authorization
     perm_flag = False
     for user in user_list:
@@ -250,7 +250,7 @@ def delete_registered_cars():
 @app.route('/cars/filter/<car_type>', methods=['GET'])
 @requires_auth
 def filter_cars(car_type):
-    "get cars of the given car type"
+    """get cars of the given car type"""
     filtered_list = [car for car in cars_list if car['car_type'] == car_type]
 
     return jsonify({'cars': filtered_list})
@@ -259,7 +259,7 @@ def filter_cars(car_type):
 @app.route('/users', methods=["GET"])
 @requires_auth
 def get_user_list():
-    "return user list if the given authenticated user has admin permission"
+    """return user list if the given authenticated user has admin permission"""
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
     return jsonify({'message': 'You are not permitted to access this resource',
