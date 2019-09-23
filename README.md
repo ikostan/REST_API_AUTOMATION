@@ -1,7 +1,8 @@
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a3c971aa10e4e93b15944480cbf9b15)](https://www.codacy.com/manual/ikostan/REST_API_AUTOMATION?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ikostan/REST_API_AUTOMATION&amp;utm_campaign=Badge_Grade)
 
-# <i class="fab fa-python"></i>Practice REST API automation with Python 3
+# Practice REST API automation with Python 3
+An API, or Application Program Interface, enables developers to integrate one app with another. To use an API, you make a request to a remote web server, and retrieve the data you need. Test Automation for APIs is needed to eliminate any possible errors, detect defects early, and ensure quality through the application development cycle. In this project, we’ll take a look at the automating API tests using Python.
 
 ## Table of Contents:<br/>
 
@@ -47,6 +48,8 @@
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
 - [Allure Framework](https://docs.qameta.io/allure/)
 - [Automated REST API Testing with Python](https://dev.to/dowenb/automated-rest-api-testing-with-python-2jm5)
+- [Writing Unit Tests for REST API in Python](https://hackernoon.com/writing-unit-tests-for-rest-api-in-python-web-application-2e675a601a53)
+- [https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python](https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python)
 
 ### Dev Environment:<br/>
 
