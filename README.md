@@ -3,7 +3,6 @@
 
 # Practice REST API automation with Python 3
 
-
 ### Table of Contents:<br/>
 
 1. <a href="#main_objectives">Main Objectives</a><br/>
