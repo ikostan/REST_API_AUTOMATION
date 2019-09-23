@@ -86,6 +86,7 @@ This REST application written in Python was built to help testers learn to write
 ### REST API app setup
 
 <a id="setup"></a>
+
  1. In your terminal prompt, pip install flask
  2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py
  3. In your terminal prompt, cd directory_that_has_cars_app_py
@@ -118,27 +119,25 @@ If everything goes right, you should see an output similar to the following:
 <details>
   <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
 
-<br/>1. In the **Settings/Preferences dialog** (Ctrl+Alt+S), select **Project <project name> | Project Interpreter**.<br/>
-2. Expand the list of the available interpreters and click the **Show All** link.<br/>
-3. Select the target interpreter. When PyCharm stops supporting any of the outdated Python versions, the corresponding project interpreter is marked as unsupported.<br/>
-4. The Python interpreter name specified in the **Name** field, becomes visible in the list of available interpreters. Click **OK** to apply the changes.<br/>
+1. In the **Settings/Preferences dialog** (Ctrl+Alt+S), select **Project <project name> | Project Interpreter**.
+2. Expand the list of the available interpreters and click the **Show All** link.
+3. Select the target interpreter. When PyCharm stops supporting any of the outdated Python versions, the corresponding project interpreter is marked as unsupported.
+4. The Python interpreter name specified in the **Name** field, becomes visible in the list of available interpreters. Click **OK** to apply the changes.
 
-For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
+For more info please [check here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)
 </details>
 
 
 <details>
   <summary><b>PyCharm - Choosing Your Testing Framework</b></summary>
  
-<br/>1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
-2. On this page, click the **Default Test Runner** field.<br/>
-3. Choose the desired test runner:<br/>
+1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.
+2. On this page, click the **Default Test Runner** field.
+3. Choose the desired test runner:
 
-<br/>   
 <div align="center"> 
 <img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
 </div>
-<br/>
 
 For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
 </details>
@@ -146,7 +145,6 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
 <details>
   <summary><b>Setting up Python3 virtual environment on Windows machine</b></summary>
-<br/>
 
 1. open CMD<br/>
 2. navigate to project directory, for example:<br/> 
@@ -199,7 +197,7 @@ pip install -r requirements.txt
 
 <details>
   <summary><b>error: RPC failed; curl 56 Recv failure: Connection was reset</b></summary>
-  <br/>
+
   1. Open Git Bash<br/>
   2. Run: "git config --global http.postBuffer 157286400" 
   
