@@ -17,37 +17,37 @@
 
 ### Main Objectives:<br/>
 <a id="main_objectives"></a>
- - Creating REST API Automation
- - Build fast and readable automation using minimal code
- - Industry-ready test structure
- - Build readable test report using Allure Framework
- - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
- - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
+- Creating REST API Automation
+- Build fast and readable automation using minimal code
+- Industry-ready test structure
+- Build readable test report using Allure Framework
+- Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
+- Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
 
 
 ### Official Documentation Sources:<br/>
 <a id="official_documentation_sources"></a>
- - [Allure Test Report](http://allure.qatools.ru/)
- - [cars-api](https://github.com/qxf2/cars-api)
- - [Practice API automation](http://35.167.62.251/)
- - [Flask](https://www.fullstackpython.com/flask.html)
+- [Allure Test Report](http://allure.qatools.ru/)
+- [cars-api](https://github.com/qxf2/cars-api)
+- [Practice API automation](http://35.167.62.251/)
+- [Flask](https://www.fullstackpython.com/flask.html)
 
 
 **Additional Tech Info Resources:**<br/>
 <a id="additional_tech_info_resources">
- - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
- - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
- - [Allure Framework](https://docs.qameta.io/allure/)
+- [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
+- [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
+- [Allure Framework](https://docs.qameta.io/allure/)
 
 
 ### Dev Environment:<br/>
 <a id="dev_env"></a>
- - [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
- - [PyTest 5.1.1](https://pypi.org/project/pytest/)
- - [Win 10 (64 bit)](https://www.microsoft.com/en-ca/software-download/windows10)
- - [PyCharm 2019.2 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)
- - [GitHub Desktop 2.1.2](https://desktop.github.com/)
- - [GIT 2.22.0.windows.1](https://git-scm.com/download/win)
+- [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
+- [PyTest 5.1.1](https://pypi.org/project/pytest/)
+- [Win 10 (64 bit)](https://www.microsoft.com/en-ca/software-download/windows10)
+- [PyCharm 2019.2 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)
+- [GitHub Desktop 2.1.2](https://desktop.github.com/)
+- [GIT 2.22.0.windows.1](https://git-scm.com/download/win)
 
 
 ### Python Packages:<br/>
