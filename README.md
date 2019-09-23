@@ -80,9 +80,18 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 3. In your terminal prompt, cd directory_that_has_cars_app_py<br/>
 4. In your terminal prompt, python cars_app.py<br/>
 
-If everything goes right, you should see an output similar to the following image:
+If everything goes right, you should see an output similar to the following:
 ```python
-
+(venv) C:\REST_API_AUTOMATION>python cars_app.py
+ * Serving Flask app "cars_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-519-712
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
 
