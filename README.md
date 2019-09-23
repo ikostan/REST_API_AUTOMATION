@@ -82,7 +82,7 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 
 If everything goes right, you should see an output similar to the following:
 ```python
-(venv) C:\REST_API_AUTOMATION>python cars_app.py
+python cars_app.py
  * Serving Flask app "cars_app" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
