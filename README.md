@@ -210,8 +210,8 @@ pip install -r requirements.txt
 <br/>Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
 
 **NOTE:**<br/>
-    - First commit your current changes, or you will lose them.<br/> 
-    - Then run the following commands from the top folder of your Git repository:<br/> 
+ - First commit your current changes, or you will lose them.<br/> 
+ - Then run the following commands from the top folder of your Git repository:<br/> 
     
 ```bash 
 git rm -r --cached .
