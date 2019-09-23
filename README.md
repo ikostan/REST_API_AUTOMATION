@@ -51,7 +51,7 @@
 
 
 ### Python Packages:<br/>
-Full list of dependencies see [here.]()
+Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMATION/blob/master/requirements.txt)
 
 
 ### Nice to have tools:
