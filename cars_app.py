@@ -29,7 +29,8 @@ from flask import Flask, request, jsonify, abort, render_template
 app = Flask(__name__)
 """
 write logs for app
-file handler of logging  module is not creating log directory if dir does not exist
+file handler of logging  module is not creating 
+log directory if dir does not exist
 """
 
 if not os.path.exists('log'):
@@ -225,7 +226,8 @@ def register_car():
     # how-can-i-create-a-random-number-that-is-cryptographically-secure-in-python
     cryptogen = SystemRandom()
     registered_car = {'car': car[0], 'customer_details': request.json,
-                      'registration_token': cryptogen.randrange(0, 4), 'successful': True}
+                      'registration_token': cryptogen.randrange(0, 4),
+                      'successful': True}
     registered_cars.append(registered_car)
 
     return jsonify({'registered_car': registered_car})
