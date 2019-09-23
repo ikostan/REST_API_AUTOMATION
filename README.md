@@ -111,8 +111,6 @@ If everything goes right, you should see an output similar to the following:
 ### Tech Issues and Problem Solving:<br/>
 <a id="tech_issues"></a>
 
-- TBD
-
 <details>
   <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
 
