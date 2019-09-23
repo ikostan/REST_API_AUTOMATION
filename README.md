@@ -35,10 +35,10 @@ An API, or Application Program Interface, enables developers to integrate one ap
 
 <a id="official_documentation_sources"></a>
 
-  - [Allure Test Report](http://allure.qatools.ru/)
-  - [cars-api](https://github.com/qxf2/cars-api)
-  - [Practice API automation](http://35.167.62.251/)
-  - [Flask](https://www.fullstackpython.com/flask.html)
+ - [Allure Test Report](http://allure.qatools.ru/)
+ - [cars-api](https://github.com/qxf2/cars-api)
+ - [Practice API automation](http://35.167.62.251/)
+ - [Flask](https://www.fullstackpython.com/flask.html)
 
 ### Additional Tech Info Resources<br/>
 
@@ -114,11 +114,13 @@ If everything goes right, you should see an output similar to the following:
 ### API endpoints and examples
 
 <a id="endpoints"></a>
+
 - TBD
 
 ### Tech Issues and Problem Solving:<br/>
 
 <a id="tech_issues"></a>
+
 - TBD
 
 
@@ -186,9 +188,8 @@ In a newly created virtualenv there will be a bin/activate shell script. For Win
 <details>
   <summary><b>Auto generate requirements.txt</b></summary>
 
-<br/>Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
-Use pip’s freeze command to generate a requirements.txt file for your project:<br/>
-
+Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
+Use pip’s freeze command to generate a requirements.txt file for your project:
 ```python
 pip freeze > requirements.txt
 ```
@@ -213,12 +214,11 @@ pip install -r requirements.txt
 <details>
   <summary><b>How to fix in case .gitignore is ignored by Git</b></summary>
 
-<br/>Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
+Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore<br/> 
 
 **NOTE:**<br/>
- - First commit your current changes, or you will lose them.<br/> 
- - Then run the following commands from the top folder of your Git repository:<br/> 
-    
+ - First commit your current changes, or you will lose them.
+ - Then run the following commands from the top folder of your Git repository:
 ```bash 
 git rm -r --cached .
 git add .
