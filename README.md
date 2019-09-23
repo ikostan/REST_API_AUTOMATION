@@ -2,7 +2,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a3c971aa10e4e93b15944480cbf9b15)](https://www.codacy.com/manual/ikostan/REST_API_AUTOMATION?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ikostan/REST_API_AUTOMATION&amp;utm_campaign=Badge_Grade)
 
 # Practice REST API automation with Python 3
-
 ### Table of Contents:<br/>
 
 1. <a href="#main_objectives">Main Objectives</a>
@@ -27,10 +26,20 @@
 ### Main Objectives:<br/>
 <a id="main_objectives"></a>
 - Creating REST API Automation<br/>
+
+
 - Build fast and readable automation using minimal code<br/>
+
+
 - Industry-ready test structure<br/>
+
+
 - Build readable test report using Allure Framework<br/>
+
+
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle).
+
+
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io).
 
 
