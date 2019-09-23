@@ -57,7 +57,12 @@ registered_cars = []
 
 
 def check_auth(username, password):
-    """check if the given is valid"""
+    """
+    Check if the given is valid
+    :param username:
+    :param password:
+    :return:
+    """
     user = [user for user in user_list if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
@@ -66,7 +71,11 @@ def check_auth(username, password):
 
 
 def authenticate_error(auth_flag):
-    """set auth message based on the authentication check result"""
+    """
+    Set auth message based on the authentication check result
+    :param auth_flag:
+    :return:
+    """
     if auth_flag is True:
         message = {'message': "Authenticate with proper credentials"}
     else:
@@ -80,7 +89,11 @@ def authenticate_error(auth_flag):
 
 
 def requires_auth(f):
-    """verify given user authentication details"""
+    """
+    Verify given user authentication details
+    :param f:
+    :return:
+    """
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.authorization
@@ -97,7 +110,10 @@ def requires_auth(f):
 
 
 def requires_perm():
-    """check if the authenticated user has a admin permission"""
+    """
+    Check if the authenticated user has a admin permission
+    :return:
+    """
     auth = request.authorization
     perm_flag = False
     for user in user_list:
@@ -109,21 +125,31 @@ def requires_perm():
 
 @app.route("/", methods=["GET"])
 def index_page():
-    """this will help test GET without url params"""
+    """
+    This will help test GET without url params
+    :return:
+    """
     return render_template('index.html')
 
 
 @app.route("/cars", methods=["GET"])
 @requires_auth
 def get_cars():
-    """this will help test GET without url params"""
+    """
+    This will help test GET without url params
+    :return:
+    """
     return flask.jsonify({"cars_list": cars_list, 'successful': True})
 
 
 @app.route("/cars/<name>", methods=["GET"])
 @requires_auth
 def get_car_details(name):
-    """this will help test GET with url params"""
+    """
+    This will help test GET with url params
+    :param name:
+    :return:
+    """
     car = [car for car in cars_list if car['name'] == name]
     if len(car) == 0:
         resp = jsonify({'message': 'No car found', 'successful': False}), 200
@@ -135,7 +161,10 @@ def get_car_details(name):
 @app.route("/cars/find", methods=["GET"])
 @requires_auth
 def get_car():
-    """this will help test GET with url params"""
+    """
+    This will help test GET with url params
+    :return:
+    """
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
@@ -156,7 +185,10 @@ def get_car():
 @app.route("/cars/add", methods=["POST"])
 @requires_auth
 def add_car():
-    """this will help test POST without url params"""
+    """
+    This will help test POST without url params
+    :return:
+    """
     if not request.json or 'name' not in request.json:
         resp = jsonify({'message': 'Not a json', 'successful': False, }), 400
     car = {
@@ -174,7 +206,11 @@ def add_car():
 @app.route("/cars/update/<name>", methods=["PUT"])
 @requires_auth
 def update_car(name):
-    """this will help test PUT """
+    """
+    This will help test PUT
+    :param name:
+    :return:
+    """
     resp = {}
     car = [car for car in cars_list if car['name'] == name]
     if len(car) != 0:
@@ -199,7 +235,11 @@ def update_car(name):
 @app.route("/cars/remove/<name>", methods=["DELETE"])
 @requires_auth
 def remove_car(name):
-    """this will help test DELETE"""
+    """
+    This will help test DELETE
+    :param name:
+    :return:
+    """
     car = [car for car in cars_list if car['name'] == name]
     if len(car) == 0:
         abort(404)
@@ -211,7 +251,10 @@ def remove_car(name):
 @app.route('/register/car', methods=['POST'])
 @requires_auth
 def register_car():
-    """this will help test GET and POST with dynamic numbers in url"""
+    """
+    This will help test GET and POST with dynamic numbers in url
+    :return:
+    """
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
@@ -236,14 +279,20 @@ def register_car():
 @app.route('/register/', methods=['GET'])
 @requires_auth
 def get_registered_cars():
-    """this will help test GET without url_params"""
+    """
+    This will help test GET without url_params
+    :return:
+    """
     return jsonify({'registered': registered_cars, 'successful': True})
 
 
 @app.route('/register/car/delete/', methods=['DELETE'])
 @requires_auth
 def delete_registered_cars():
-    """this will help test delete"""
+    """
+    This will help test delete
+    :return:
+    """
     del registered_cars[0]
 
     return jsonify({'successful': True}), 200
@@ -252,7 +301,11 @@ def delete_registered_cars():
 @app.route('/cars/filter/<car_type>', methods=['GET'])
 @requires_auth
 def filter_cars(car_type):
-    """get cars of the given car type"""
+    """
+    Get cars of the given car type
+    :param car_type:
+    :return:
+    """
     filtered_list = [car for car in cars_list if car['car_type'] == car_type]
 
     return jsonify({'cars': filtered_list})
@@ -261,7 +314,10 @@ def filter_cars(car_type):
 @app.route('/users', methods=["GET"])
 @requires_auth
 def get_user_list():
-    """return user list if the given authenticated user has admin permission"""
+    """
+    Return user list if the given authenticated user has admin permission
+    :return:
+    """
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
     return jsonify({'message': 'You are not permitted to access this resource',
