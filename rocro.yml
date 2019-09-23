@@ -3,5 +3,6 @@ inspecode:
     runtime:
       python: 3.7.0
   pycodestyle: default
-  pylint: default
+  pylint:
+    –disable=redefined-builtin
   pytest: default
