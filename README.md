@@ -172,13 +172,13 @@ In a newly created virtualenv there will be a bin/activate shell script. For Win
 
 Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
 Use pip’s freeze command to generate a requirements.txt file for your project:
-```python
+```bash
 pip freeze > requirements.txt
 ```
 
 If you save this in requirements.txt, you can follow this guide: [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html), or you can:<br/>
    
-```python
+```bash
 pip install -r requirements.txt
 ```   
 [Source](https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
