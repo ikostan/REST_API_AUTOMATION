@@ -29,7 +29,7 @@ from flask import Flask, request, jsonify, abort, render_template
 app = Flask(__name__)
 """
 write logs for app
-filehandler of logging  module is not creating log directory if dir does not exist
+file handler of logging  module is not creating log directory if dir does not exist
 """
 
 if not os.path.exists('log'):
