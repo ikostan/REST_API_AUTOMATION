@@ -71,6 +71,11 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
 
+### About REST API app
+
+This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by [Qxf2 Services](https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai).
+
+
 ### REST API app setup
 
  1. In your terminal prompt, pip install flask
