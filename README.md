@@ -2,6 +2,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a3c971aa10e4e93b15944480cbf9b15)](https://www.codacy.com/manual/ikostan/REST_API_AUTOMATION?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ikostan/REST_API_AUTOMATION&amp;utm_campaign=Badge_Grade)
 
 # Practice REST API automation with Python 3
+
+<i class="fab fa-python"></i>
+
 ### Table of Contents:<br/>
    1. <a href="#main_objectives">Main Objectives</a>
    2. <a href="#official_documentation_sources">Official Documentation Sources</a>
