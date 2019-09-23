@@ -27,6 +27,8 @@
 ### Official Documentation Sources:<br/>
 <a id="official_documentation_sources"></a>
 - [Allure Test Report](http://allure.qatools.ru/)
+- [cars-api](https://github.com/qxf2/cars-api)
+- [Practice API automation](http://35.167.62.251/)
 
 
 **Additional Tech Info Resources:**<br/>
