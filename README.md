@@ -23,6 +23,7 @@
 - Industry-ready test structure<br/>
 - Build readable test report using Allure Framework<br/>
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle).
+- Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io).
 
 
 ### Official Documentation Sources:<br/>
