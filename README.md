@@ -31,14 +31,14 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
 
-### Official Documentation Sources:<br/>
+### Official Documentation Sources<br/>
 
 <a id="official_documentation_sources"></a>
 
-- [Allure Test Report](http://allure.qatools.ru/)
-- [cars-api](https://github.com/qxf2/cars-api)
-- [Practice API automation](http://35.167.62.251/)
-- [Flask](https://www.fullstackpython.com/flask.html)
+  - [Allure Test Report](http://allure.qatools.ru/)
+  - [cars-api](https://github.com/qxf2/cars-api)
+  - [Practice API automation](http://35.167.62.251/)
+  - [Flask](https://www.fullstackpython.com/flask.html)
 
 ### Additional Tech Info Resources<br/>
 
