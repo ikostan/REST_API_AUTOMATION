@@ -5,18 +5,18 @@
 
 ### Table of Contents:<br/>
 
-:one: <a href="#main_objectives">Main Objectives</a><br>
-:two: <a href="#official_documentation_sources">Official Documentation Sources</a><br>
-:three: <a href="#additional_tech_info_resources">Additional Tech Info Resources</a><br>
-:four: <a href="#dev_env">Dev Environment</a><br>
-:five: <a href="#tools">Nice to have tools</a><br>
-:six: <a href="#about">About REST API app</a><br>
-:seven: <a href="#setup">REST API app setup</a><br>
-:eight: <a href="#endpoints">API endpoints and examples</a><br>
-:nine: <a href="#guidelines">General guidelines: How to set up dev environment</a><br>
-:one::zero: <a href="#tech_issues">Tech Issues and Problem Solving</a><br>
-:one::one: <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a><br>
-:one::two: <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/><br>
+1. <a href="#main_objectives">Main Objectives</a><br>
+2. <a href="#official_documentation_sources">Official Documentation Sources</a><br>
+3. <a href="#additional_tech_info_resources">Additional Tech Info Resources</a><br>
+4. <a href="#dev_env">Dev Environment</a><br>
+5. <a href="#tools">Nice to have tools</a><br>
+6. <a href="#about">About REST API app</a><br>
+7. <a href="#setup">REST API app setup</a><br>
+8. <a href="#endpoints">API endpoints and examples</a><br>
+9. <a href="#guidelines">General guidelines: How to set up dev environment</a><br>
+10. <a href="#tech_issues">Tech Issues and Problem Solving</a><br>
+11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a><br>
+12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/><br>
 
 ### Main Objectives:<br/>
 
