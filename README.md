@@ -182,7 +182,7 @@ virtualenv venv --python=python
  1. Open Terminal
  2. Run: \path\to\env\Scripts\activate 
   
-  <br/>Source: https://pypi.org/project/virtualenv/1.8.2/
+[Source](https://pypi.org/project/virtualenv/1.8.2/)
   
 </details>
 
@@ -202,7 +202,7 @@ If you save this in requirements.txt, you can follow this guide: [PyCharm - Mana
 ```python
 pip install -r requirements.txt
 ```   
-Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
+[Source](https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/)
 </details>
 
 
@@ -213,7 +213,7 @@ Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements
   1. Open Git Bash<br/>
   2. Run: "git config --global http.postBuffer 157286400" 
   
-  <br/>Source: https://stackoverflow.com/questions/36940425/gitlab-push-failed-error
+[Source](https://stackoverflow.com/questions/36940425/gitlab-push-failed-error)
   
 </details>
 
@@ -234,4 +234,3 @@ Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements
    ```
     
 </details>
-
