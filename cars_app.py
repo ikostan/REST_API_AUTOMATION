@@ -11,7 +11,7 @@ GET, POST, PUT and DELETE methods.
 It includes endpoints that use URL parameters, jSON payloads,
 returns different response codes, etc.
 
-We have also included permissioning and authentication too
+We have also included permissions and authentication too
 to help you write role based API tests.
 
 IMPORTANT DISCLAIMER: The code here does not reflect
