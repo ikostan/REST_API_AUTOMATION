@@ -17,9 +17,10 @@
 11. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/tests">Tests</a>
 12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/>
 
-<a id="main_objectives"></a>
+
 ### Main Objectives:<br/>
 
+<a id="main_objectives"></a>
 - Creating REST API Automation
 - Build fast and readable automation using minimal code
 - Industry-ready test structure
@@ -27,9 +28,10 @@
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle)
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
 
-<a id="official_documentation_sources"></a>
+
 ### Official Documentation Sources:<br/>
 
+<a id="official_documentation_sources"></a>
 - [Allure Test Report](http://allure.qatools.ru/)
 - [cars-api](https://github.com/qxf2/cars-api)
 - [Practice API automation](http://35.167.62.251/)
@@ -37,16 +39,16 @@
 
 
 **Additional Tech Info Resources:**<br/>
-<a id="additional_tech_info_resources">
 
+<a id="additional_tech_info_resources">
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
 - [Allure Framework](https://docs.qameta.io/allure/)
 
 
-<a id="dev_env"></a>
 ### Dev Environment:<br/>
 
+<a id="dev_env"></a>
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
 - [PyTest 5.1.1](https://pypi.org/project/pytest/)
 - [Win 10 (64 bit)](https://www.microsoft.com/en-ca/software-download/windows10)
@@ -59,16 +61,16 @@
 Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMATION/blob/master/requirements.txt)
 
 
-<a id="tools"></a>
 ### Nice to have tools:
 
+<a id="tools"></a>
  1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
  2. [Kite: Code Faster in Python](https://kite.com/)
 
 
-<a id="guidelines"></a>
 ### General guidelines: How to set up dev environment.<br/>
 
+<a id="guidelines"></a>
  1. Install Python
  2. Install PyCharm
  3. Configure Python virtual environment and activate it
@@ -78,15 +80,15 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
 
-<a id="about"></a>
 ### About REST API app
 
+<a id="about"></a>
 This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by [Qxf2 Services](https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai).
 
 
-<a id="setup"></a>
 ### REST API app setup
 
+<a id="setup"></a>
  1. In your terminal prompt, pip install flask
  2. Copy the contents of [this file](https://github.com/qxf2/cars-api/blob/master/cars_app.py) and save it (anywhere) as cars_app.py
  3. In your terminal prompt, cd directory_that_has_cars_app_py
@@ -106,15 +108,15 @@ If everything goes right, you should see an output similar to the following:
 ```
 
 
-<a id="endpoints"></a>
 ### API endpoints and examples
 
+<a id="endpoints"></a>
 - TBD
 
 
-<a id="tech_issues"></a>
 ### Tech Issues and Problem Solving:<br/>
 
+<a id="tech_issues"></a>
 - TBD
 
 
@@ -182,8 +184,8 @@ virtualenv venv --python=python
   In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
   <br/><br/>
 
-  1. Open Terminal<br/>
-  2. Run: \path\to\env\Scripts\activate 
+1. Open Terminal
+2. Run: \path\to\env\Scripts\activate 
   
   <br/>Source: https://pypi.org/project/virtualenv/1.8.2/
   
