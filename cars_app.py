@@ -1,11 +1,23 @@
-"""
-cars api is a sample web application developed by Qxf2 Services to help testers learn API automation.
-This REST application written in Python was built solely to help QA learn to write API automation.
-The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods.
-It includes endpoints that use URL parameters, jSON payloads, returns different response codes, etc.
-We have also included permissioning and authentication too to help you write role based API tests.
-IMPORTANT DISCLAIMER: The code here does not reflect Qxf2's coding standards and practices.
-"""
+'''
+cars api is a sample web application developed by Qxf2 Services
+to help testers learn API automation.
+
+This REST application written in Python was built solely
+to help QA learn to write API automation.
+
+The application has endpoints for you to practice automating
+GET, POST, PUT and DELETE methods.
+
+It includes endpoints that use URL parameters, jSON payloads,
+returns different response codes, etc.
+
+We have also included permissioning and authentication too
+to help you write role based API tests.
+
+IMPORTANT DISCLAIMER: The code here does not reflect
+Qxf2's coding standards and practices.
+'''
+
 
 import os
 from functools import wraps
@@ -16,18 +28,24 @@ from flask import Flask, request, jsonify, abort, render_template
 
 
 app = Flask(__name__)
-"""write logs for app
-   filehandler of logging  module is not creating log directory if dir does not exist"""
+'''
+write logs for app
+filehandler of logging  module is not creating log directory if dir does not exist
+'''
 if not os.path.exists('log'):
     os.makedirs('log')
 file_handler = logging.FileHandler('log/app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 
-cars_list = [{"name": "Swift", "brand": "Maruti", "price_range": "3-5 lacs", "car_type": "hatchback"},
-             {"name": "Creta", "brand": "Hyundai", "price_range": "8-14 lacs", "car_type": "hatchback"},
-             {"name": "City", "brand": "Honda", "price_range": "3-6 lacs", "car_type": "sedan"},
-             {"name": "Vento", "brand": "Volkswagen", "price_range": "7-10 lacs", "car_type": "sedan"}]
+cars_list = [{"name": "Swift", "brand": "Maruti",
+              "price_range": "3-5 lacs", "car_type": "hatchback"},
+             {"name": "Creta", "brand": "Hyundai",
+              "price_range": "8-14 lacs", "car_type": "hatchback"},
+             {"name": "City", "brand": "Honda",
+              "price_range": "3-6 lacs", "car_type": "sedan"},
+             {"name": "Vento", "brand": "Volkswagen",
+              "price_range": "7-10 lacs", "car_type": "sedan"}]
 
 user_list = [{"name": "qxf2", "password": "qxf2", "perm": "admin"},
              {"name": "eric", "password": "testqxf2", "perm": "non_admin"},
