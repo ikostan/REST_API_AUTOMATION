@@ -20,7 +20,6 @@ An API, or Application Program Interface, enables developers to integrate one ap
 12. <a href="https://github.com/ikostan/TestAutomationFrameworkUsingAppiumWithPython/tree/master/utils">Utils</a><br/><br>
 
 ### Main Objectives:<br/>
-
 <a id="main_objectives"></a>
 
 - Creating REST API Automation
@@ -32,16 +31,14 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - Using cloud automation platforms: [Codacy](https://www.codacy.com/), [CirclerCI](https://circleci.com), [TravisCI](https://travis-ci.org), [INSPECODE](https://inspecode.rocro.com), [Codecov](https://codecov.io)
 
 ### Official Documentation Sources<br/>
-
 <a id="official_documentation_sources"></a>
 
- - [Allure Test Report](http://allure.qatools.ru/)
- - [cars-api](https://github.com/qxf2/cars-api)
- - [Practice API automation](http://35.167.62.251/)
- - [Flask](https://www.fullstackpython.com/flask.html)
+- [Allure Test Report](http://allure.qatools.ru/)
+- [cars-api](https://github.com/qxf2/cars-api)
+- [Practice API automation](http://35.167.62.251/)
+- [Flask](https://www.fullstackpython.com/flask.html)
 
 ### Additional Tech Info Resources<br/>
-
 <a id="additional_tech_info_resources"></a>
 
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
@@ -52,7 +49,6 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - [https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python](https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python)
 
 ### Dev Environment:<br/>
-
 <a id="dev_env"></a>
 
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
@@ -66,14 +62,12 @@ An API, or Application Program Interface, enables developers to integrate one ap
 Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMATION/blob/master/requirements.txt)
 
 ### Nice to have tools
-
 <a id="tools"></a>
 
  1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
  2. [Kite: Code Faster in Python](https://kite.com/)
 
 ### General guidelines: How to set up dev environment.<br/>
-
 <a id="guidelines"></a>
 
  1. Install Python
@@ -85,12 +79,10 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 **NOTE:** for more detailed info please see "Tech Issues and Problem Solving" section<br/>
 
 ### About REST API app
-
 <a id="about"></a>
 This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by [Qxf2 Services](https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai).
 
 ### REST API app setup
-
 <a id="setup"></a>
 
  1. In your terminal prompt, pip install flask
@@ -112,17 +104,14 @@ If everything goes right, you should see an output similar to the following:
 ```
 
 ### API endpoints and examples
-
 <a id="endpoints"></a>
 
 - TBD
 
 ### Tech Issues and Problem Solving:<br/>
-
 <a id="tech_issues"></a>
 
 - TBD
-
 
 <details>
   <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
@@ -134,7 +123,6 @@ If everything goes right, you should see an output similar to the following:
 
 For more info please [check here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)
 </details>
-
 
 <details>
   <summary><b>PyCharm - Choosing Your Testing Framework</b></summary>
@@ -149,7 +137,6 @@ For more info please [check here](https://www.jetbrains.com/help/pycharm/configu
 
 For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
 </details>
-
 
 <details>
   <summary><b>Setting up Python3 virtual environment on Windows machine</b></summary>
