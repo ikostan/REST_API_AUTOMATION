@@ -10,7 +10,7 @@ Welcome to Practice REST API automation with Python 3's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules
 
 Indices and tables
 ==================
