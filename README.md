@@ -44,7 +44,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - [Allure Framework](https://docs.qameta.io/allure/)
 - [Automated REST API Testing with Python](https://dev.to/dowenb/automated-rest-api-testing-with-python-2jm5)
 - [Writing Unit Tests for REST API in Python](https://hackernoon.com/writing-unit-tests-for-rest-api-in-python-web-application-2e675a601a53)
-- [https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python](https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python)
+- [Guide-to automating API tests using Python](https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python)
 
 ### Dev Environment:<br/>
 <a id="dev_env"></a>
