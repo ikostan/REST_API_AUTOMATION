@@ -2,6 +2,7 @@
 
 # Practice REST API automation with Python 3
 
+
 ### Table of Contents:<br/>
 
 1. <a href="#main_objectives">Main Objectives</a><br/>
@@ -29,6 +30,7 @@
 - [Allure Test Report](http://allure.qatools.ru/)
 - [cars-api](https://github.com/qxf2/cars-api)
 - [Practice API automation](http://35.167.62.251/)
+- [Flask](https://www.fullstackpython.com/flask.html)
 
 
 **Additional Tech Info Resources:**<br/>
@@ -46,7 +48,6 @@
 - [PyCharm 2019.2 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)<br/>
 - [GitHub Desktop 2.1.2](https://desktop.github.com/)<br/>
 - [GIT 2.22.0.windows.1](https://git-scm.com/download/win)<br/>
-
 
 
 ### Python Packages:<br/>
@@ -82,8 +83,10 @@ If everything goes right, you should see an output similar to the following imag
 
 ```
 
+
 ### Tech Issues and Problem Solving:<br/>
 <a id="tech_issues"></a>
+
 
 <details>
   <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
