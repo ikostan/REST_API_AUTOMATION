@@ -37,7 +37,6 @@
 - [Practice API automation](http://35.167.62.251/)
 - [Flask](https://www.fullstackpython.com/flask.html)
 
-
 ### Additional Tech Info Resources<br/>
 
 <a id="additional_tech_info_resources"></a>
