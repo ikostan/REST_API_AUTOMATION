@@ -20,6 +20,7 @@
 ### Main Objectives:<br/>
 
 <a id="main_objectives"></a>
+
 - Creating REST API Automation
 - Build fast and readable automation using minimal code
 - Industry-ready test structure
@@ -30,15 +31,17 @@
 ### Official Documentation Sources:<br/>
 
 <a id="official_documentation_sources"></a>
+
 - [Allure Test Report](http://allure.qatools.ru/)
 - [cars-api](https://github.com/qxf2/cars-api)
 - [Practice API automation](http://35.167.62.251/)
 - [Flask](https://www.fullstackpython.com/flask.html)
 
 
-**Additional Tech Info Resources:**<br/>
+### Additional Tech Info Resources<br/>
 
-<a id="additional_tech_info_resources">
+<a id="additional_tech_info_resources"></a>
+
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
 - [Allure Framework](https://docs.qameta.io/allure/)
@@ -46,6 +49,7 @@
 ### Dev Environment:<br/>
 
 <a id="dev_env"></a>
+
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
 - [PyTest 5.1.1](https://pypi.org/project/pytest/)
 - [Win 10 (64 bit)](https://www.microsoft.com/en-ca/software-download/windows10)
@@ -59,12 +63,14 @@ Full list of dependencies see [here.](https://github.com/ikostan/REST_API_AUTOMA
 ### Nice to have tools:
 
 <a id="tools"></a>
+
  1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
  2. [Kite: Code Faster in Python](https://kite.com/)
 
 ### General guidelines: How to set up dev environment.<br/>
 
 <a id="guidelines"></a>
+
  1. Install Python
  2. Install PyCharm
  3. Configure Python virtual environment and activate it
