@@ -13,9 +13,11 @@
 <img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/build-devops-automation-recycle_code-refresh_settings-preferences-512.png" hspace="20">
 </div>
 
+## Project Description
+
 An API, or Application Program Interface, enables developers to integrate one app with another. To use an API, you make a request to a remote web server, and retrieve the data you need. Test Automation for APIs is needed to eliminate any possible errors, detect defects early, and ensure quality through the application development cycle. In this project, we’ll take a look at the automating API tests using Python.
 
-## Table of Contents:<br/>
+### Table of Contents:<br/>
 
 1. <a href="#main_objectives">Main Objectives</a>
 2. <a href="#official_documentation_sources">Official Documentation Sources</a>
