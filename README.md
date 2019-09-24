@@ -4,7 +4,7 @@
 [![Job Status](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/status?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/jobs/github.com/ikostan/REST_API_AUTOMATION/latest?completed=true&branch=master)
 [![Report](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/report?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/reports/github.com/ikostan/REST_API_AUTOMATION/branch/master/summary)
 
-# Practice REST API automation with Python 3
+# Practice REST API test automation with Python 3
 
 <div align="center"> 
 <img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/python-icon-18.jpg" hspace="20">
