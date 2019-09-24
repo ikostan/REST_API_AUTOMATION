@@ -7,7 +7,7 @@
 # Practice REST API automation with Python 3
 
 <div align="center"> 
-<img width="10%" height="10%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/python-icon-18.jpg" hspace="20">
+<img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/python-icon-18.jpg" hspace="20">
 <img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/rest-api-icon-8.jpg" hspace="20">
 <img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/iconfinder_api-code-window_532742.png" hspace="20">
 <img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/build-devops-automation-recycle_code-refresh_settings-preferences-512.png" hspace="20">
