@@ -186,8 +186,8 @@ pip install -r requirements.txt
 <details>
   <summary><b>error: RPC failed; curl 56 Recv failure: Connection was reset</b></summary>
 
- 1. Open Git Bash<br/>
- 2. Run: "git config --global http.postBuffer 157286400" 
+1. Open Git Bash<br/>
+2. Run: "git config --global http.postBuffer 157286400" 
   
 [Source](https://stackoverflow.com/questions/36940425/gitlab-push-failed-error)
 </details>
