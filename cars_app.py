@@ -141,7 +141,8 @@ def get_cars():
     :return: returns a list of cars
     :Example:
 
-    response = requests.get(url='http://127.0.0.1:5000/cars', auth=(username,password))
+    response = requests.get(url='http://127.0.0.1:5000/cars',
+    auth=(username,password))
     """
     return flask.jsonify({"cars_list": cars_list, 'successful': True})
 
@@ -155,7 +156,8 @@ def get_car_details(name):
     :return: car by name
     :Example:
 
-    response = requests.get(url='http://127.0.0.1:5000/cars/Swift',auth=(username,password))
+    response = requests.get(url='http://127.0.0.1:5000/cars/Swift',
+    auth=(username,password))
     """
     car = [car for car in cars_list if car['name'] == name]
     if len(car) == 0:
@@ -261,7 +263,8 @@ def remove_car(name):
     :return:
     :Example:
 
-    response = requests.delete(url='http://127.0.0.1:5000/register/cars/remove/City',
+    response = requests.delete(
+    url='http://127.0.0.1:5000/register/cars/remove/City',
     auth=(username,password))
     """
     car = [car for car in cars_list if car['name'] == name]
@@ -336,7 +339,8 @@ def filter_cars(car_type):
     :return: filtered list (by car type) of cars
     :Example:
 
-    response = requests.get(url='http://127.0.0.1:5000/cars/filter/hatchback',
+    response = requests.get(
+    url='http://127.0.0.1:5000/cars/filter/hatchback',
     auth=(username,password))
     """
     filtered_list = [car for car in cars_list if car['car_type'] == car_type]
@@ -352,7 +356,8 @@ def get_user_list():
     :return: the list of users or 403 error
     :Example:
 
-    response = requests.get(url='http://127.0.0.1:5000/users',auth=(username,password))
+    response = requests.get(url='http://127.0.0.1:5000/users',
+    auth=(username,password))
     """
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
