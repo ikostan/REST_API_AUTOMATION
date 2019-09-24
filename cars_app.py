@@ -28,9 +28,8 @@ from flask import Flask, request, jsonify, abort, render_template
 
 app = Flask(__name__)
 """
-write logs for app
-file handler of logging  module is not creating 
-log directory if dir does not exist
+Write logs for app file handler of logging module.
+It is not creating log directory if dir does not exist.
 """
 
 if not os.path.exists('log'):
@@ -61,12 +60,13 @@ def check_auth(username, password):
     Check if the given is valid
     :param username:
     :param password:
-    :return:
+    :return: True/False
     """
     user = [user for user in user_list if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
         return True
+
     return False
 
 
@@ -120,6 +120,7 @@ def requires_perm():
         if user['name'] == auth.username and user['perm'] == 'admin':
             perm_flag = True
             return perm_flag
+
     return perm_flag
 
 
@@ -150,14 +151,18 @@ def get_cars():
 def get_car_details(name):
     """
     This will help test GET with url params
-    :param name:
-    :return:
+    :param name: car name
+    :return: car by name
+    :Example:
+
+    response = requests.get(url='http://127.0.0.1:5000/cars/Swift',auth=(username,password))
     """
     car = [car for car in cars_list if car['name'] == name]
     if len(car) == 0:
         resp = jsonify({'message': 'No car found', 'successful': False}), 200
     else:
         resp = jsonify({'car': car[0], 'successful': True}), 200
+
     return resp
 
 
@@ -189,8 +194,14 @@ def get_car():
 @requires_auth
 def add_car():
     """
-    This will help test POST without url params
+    This will help test POST without url params.
+    Add new cars.
     :return:
+    :Example:
+
+    response = requests.post(url='http://127.0.0.1:5000/cars/add',
+    json={'name':'figo','brand':'Ford','price_range':'2-3lacs','car_type':'hatchback'},
+    auth=(username,password))
     """
     if not request.json or 'name' not in request.json:
         resp = jsonify({'message': 'Not a json', 'successful': False, }), 400
@@ -211,8 +222,14 @@ def add_car():
 def update_car(name):
     """
     This will help test PUT
+    Add new cars.
     :param name:
     :return:
+    :Example:
+
+    response = requests.post(url='http://127.0.0.1:5000/cars/add',
+    json={'name':'figo','brand':'Ford','price_range':'2-3lacs','car_type':'hatchback'},
+    auth=(username,password))
     """
     resp = {}
     car = [car for car in cars_list if car['name'] == name]
@@ -242,6 +259,10 @@ def remove_car(name):
     This will help test DELETE
     :param name:
     :return:
+    :Example:
+
+    response = requests.delete(url='http://127.0.0.1:5000/register/cars/remove/City',
+    auth=(username,password))
     """
     car = [car for car in cars_list if car['name'] == name]
     if len(car) == 0:
@@ -293,8 +314,13 @@ def get_registered_cars():
 @requires_auth
 def delete_registered_cars():
     """
-    This will help test delete
+    This will help test delete.
+    Delete first entry in car registration list.
     :return:
+    :Example:
+
+    response = requests.delete(url='http://127.0.0.1:5000/register/car/delete',
+    auth=(username,password))
     """
     del registered_cars[0]
 
@@ -306,8 +332,12 @@ def delete_registered_cars():
 def filter_cars(car_type):
     """
     Get cars of the given car type
-    :param car_type:
-    :return:
+    :param car_type: hatchback, sedan, etc...
+    :return: filtered list (by car type) of cars
+    :Example:
+
+    response = requests.get(url='http://127.0.0.1:5000/cars/filter/hatchback',
+    auth=(username,password))
     """
     filtered_list = [car for car in cars_list if car['car_type'] == car_type]
 
@@ -319,13 +349,14 @@ def filter_cars(car_type):
 def get_user_list():
     """
     Return user list if the given authenticated user has admin permission
-    :return:
+    :return: the list of users or 403 error
     :Example:
 
     response = requests.get(url='http://127.0.0.1:5000/users',auth=(username,password))
     """
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
+
     return jsonify({'message': 'You are not permitted to access this resource',
                     'successful': False}), 403
 
