@@ -5,6 +5,14 @@
 [![Report](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/report?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/reports/github.com/ikostan/REST_API_AUTOMATION/branch/master/summary)
 
 # Practice REST API automation with Python 3
+
+<div align="center"> 
+<img width="10%" height="10%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/iconfinder_application-x-python_8974.png" hspace="5">
+<img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/rest-api-icon-8.jpg" hspace="5">
+<img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/iconfinder_api-code-window_532742.png" hspace="5">
+<img width="9%" height="9%" src="https://github.com/ikostan/REST_API_AUTOMATION/blob/master/files/build-devops-automation-recycle_code-refresh_settings-preferences-512.png" hspace="5">
+</div>
+
 An API, or Application Program Interface, enables developers to integrate one app with another. To use an API, you make a request to a remote web server, and retrieve the data you need. Test Automation for APIs is needed to eliminate any possible errors, detect defects early, and ensure quality through the application development cycle. In this project, we’ll take a look at the automating API tests using Python.
 
 ## Table of Contents:<br/>
