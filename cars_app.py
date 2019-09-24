@@ -112,7 +112,7 @@ def requires_auth(f):
 def requires_perm():
     """
     Check if the authenticated user has a admin permission
-    :return:
+    :return: permission flag True/False
     """
     auth = request.authorization
     perm_flag = False
@@ -127,7 +127,7 @@ def requires_perm():
 def index_page():
     """
     This will help test GET without url params
-    :return:
+    :return: rendered 'index.html' template
     """
     return render_template('index.html')
 
@@ -137,7 +137,10 @@ def index_page():
 def get_cars():
     """
     This will help test GET without url params
-    :return:
+    :return: returns a list of cars
+    :Example:
+
+    response = requests.get(url='http://127.0.0.1:5000/cars', auth=(username,password))
     """
     return flask.jsonify({"cars_list": cars_list, 'successful': True})
 
@@ -317,6 +320,9 @@ def get_user_list():
     """
     Return user list if the given authenticated user has admin permission
     :return:
+    :Example:
+
+    response = requests.get(url='http://127.0.0.1:5000/users',auth=(username,password))
     """
     if requires_perm() is True:
         return jsonify({'user_list': user_list, 'successful': True}), 200
@@ -325,4 +331,12 @@ def get_user_list():
 
 
 if __name__ == "__main__":
+    """
+    Top-level script environment.
+    
+    A module can discover whether or not it is running in 
+    the main scope by checking its own __name__, which allows 
+    a common idiom for conditionally executing code in a module 
+    when it is run as a script or with python -m but not when it is imported.
+    """
     app.run(host="127.0.0.1", port=5000, debug=True)
