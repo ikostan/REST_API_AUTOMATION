@@ -51,7 +51,7 @@ class GetCarsTestCase(BaseTestCase):
 			                   "price_range": "7-10 lacs",
 			                   "car_type": "sedan"}]
 
-			self.CARS_LIST = cls.CARS_HATCHBACK + cls.CARS_SEDAN
+			self.CARS_LIST = self.CARS_HATCHBACK + self.CARS_SEDAN
 
 	def test_get_list_of_cars_admin(self):
 		"""
