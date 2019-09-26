@@ -8,6 +8,7 @@ python:
   - "3.7"
 
 install:
+    - "pip install flask"
     - "pip install pytest"
     - "pip install pytest-cov" #This plugin produces coverage reports
     - "pip install codecov" #install codecov
