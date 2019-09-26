@@ -222,3 +222,17 @@ git add .
 git commit -m "fixed untracked files"
 ```
 </details>
+
+<details>
+  <summary><b>How to generate Allure report with history trends (Windows OS)</b></summary>
+
+Step by step:
+
+1. Run tests from pytest using following arguments: -v --alluredir=allure-results
+2. Copy '.\allure-report\history\' folder into '.\allure-results\history\'
+3. Run: allure generate .\allure-results\ -o .\allure-report\ --clean
+4. Following output should appear: Report successfully generated to .\allure-report
+5. Run: allure open .\allure-report\
+
+[Source](https://github.com/allure-framework/allure2/issues/813)
+</details>
