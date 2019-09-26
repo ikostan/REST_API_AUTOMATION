@@ -34,22 +34,22 @@ class GetCarsTestCase(BaseTestCase):
 
 		with allure.step("Arrange expected results (cars list)"):
 			self.CARS_HATCHBACK = [{"name": "Swift",
-			                       "brand": "Maruti",
-			                       "price_range": "3-5 lacs",
-			                       "car_type": "hatchback"},
-			                      {"name": "Creta",
-			                       "brand": "Hyundai",
-			                       "price_range": "8-14 lacs",
-			                       "car_type": "hatchback"}]
+			                        "brand": "Maruti",
+			                        "price_range": "3-5 lacs",
+			                        "car_type": "hatchback"},
+			                       {"name": "Creta",
+			                        "brand": "Hyundai",
+			                        "price_range": "8-14 lacs",
+			                        "car_type": "hatchback"}]
 
 			self.CARS_SEDAN = [{"name": "City",
-			                   "brand": "Honda",
-			                   "price_range": "3-6 lacs",
-			                   "car_type": "sedan"},
-			                  {"name": "Vento",
-			                   "brand": "Volkswagen",
-			                   "price_range": "7-10 lacs",
-			                   "car_type": "sedan"}]
+			                    "brand": "Honda",
+			                    "price_range": "3-6 lacs",
+			                    "car_type": "sedan"},
+			                   {"name": "Vento",
+			                    "brand": "Volkswagen",
+			                    "price_range": "7-10 lacs",
+			                    "car_type": "sedan"}]
 
 			self.CARS_LIST = self.CARS_HATCHBACK + self.CARS_SEDAN
 
@@ -58,6 +58,9 @@ class GetCarsTestCase(BaseTestCase):
 		Get full list of cars using admin user credentials.
 		:return:
 		"""
+
+		allure.dynamic.title("Get list of cars using admin user credentials")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		with allure.step("Verify user permissions"):
 			username = cars_app.user_list[0]['name']
@@ -86,6 +89,9 @@ class GetCarsTestCase(BaseTestCase):
 		:return:
 		"""
 
+		allure.dynamic.title("Get list of cars using non admin user credentials")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
+
 		with allure.step("Verify user permissions"):
 			username = cars_app.user_list[1]['name']
 			password = cars_app.user_list[1]['password']
@@ -109,10 +115,13 @@ class GetCarsTestCase(BaseTestCase):
 
 	def test_get_list_of_cars_non_admin_sedan(self):
 		"""
-		Get full list of cars from type = 'sedan'
+		Get full list of cars of type = 'sedan'
 		using non admin user credentials.
 		:return:
 		"""
+
+		allure.dynamic.title("Get list of cars of type = 'sedan' using non admin user credentials")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		with allure.step("Verify user permissions"):
 			username = cars_app.user_list[1]['name']
@@ -139,6 +148,9 @@ class GetCarsTestCase(BaseTestCase):
 		:return:
 		"""
 
+		allure.dynamic.title("Get list of cars of type = 'hatchback' using admin user credentials")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
+
 		with allure.step("Verify user permissions"):
 			username = cars_app.user_list[0]['name']
 			password = cars_app.user_list[0]['password']
@@ -163,6 +175,9 @@ class GetCarsTestCase(BaseTestCase):
 		using non admin user credentials.
 		:return:
 		"""
+
+		allure.dynamic.title("Get car data by name using non admin user credentials")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		with allure.step("Verify user permissions"):
 			username = cars_app.user_list[1]['name']
