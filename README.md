@@ -170,6 +170,66 @@ virtualenv venv --python=python
 </details>
 
 <details>
+  <summary><b>Setting up Python3 virtual environment on Linx (Ubuntu) machine</b></summary>
+
+### How to install virtualenv:
+
+1. Install **pip** first
+```bash
+    sudo apt-get install python3-pip
+```
+
+2. Then install **virtualenv** using pip3
+```bash
+    sudo pip3 install virtualenv
+```
+
+3. Now create a virtual environment
+```bash
+    virtualenv venv
+```
+>you can use any name insted of **venv**
+
+4. You can also use a Python interpreter of your choice:
+
+```bash
+    virtualenv -p /usr/bin/python2.7 venv
+```
+
+5. Active your virtual environment:
+
+ ```bash
+    source venv/bin/activate
+```
+
+6. Using fish shell:
+
+```bash
+    source venv/bin/activate.fish
+```
+
+7. To deactivate:
+
+```bash
+    deactivate
+```
+
+8. Create virtualenv using Python3:
+
+```bash
+    virtualenv -p python3 myenv
+```
+
+9. Instead of using virtualenv you can use this command in Python3:
+
+```bash
+    python3 -m venv myenv
+```
+
+[Source](https://gist.github.com/frfahim/73c0fad6350332cef7a653bcd762f08d)
+</details>
+
+<details>
   <summary><b>Activate Virtual Environment</b></summary>
 
 In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
