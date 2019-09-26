@@ -21,11 +21,11 @@ class BaseTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         """
-	    1. Get Args from CLI
-	    2. Set Test URL
-	    3. Start REST API Service
-	    :return:
-	    """
+        1. Get Args from CLI
+        2. Set Test URL
+        3. Start REST API Service
+        :return:
+        """
 
         allure.dynamic.title("Test pre set-up")
 
@@ -51,9 +51,9 @@ class BaseTestCase(unittest.TestCase):
     @classmethod
     def tearDownClass(cls) -> None:
         """
-		1. Stop REST API Service
-		:return:
-		"""
+        1. Stop REST API Service
+        :return:
+        """
         allure.dynamic.title("Post test activities")
 
         with allure.step("Stop REST API Service"):
