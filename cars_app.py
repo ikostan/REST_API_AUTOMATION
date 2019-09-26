@@ -1,3 +1,5 @@
+#!/path/to/interpreter
+
 """
 cars api is a sample web application developed by Qxf2 Services
 to help testers learn API automation.
