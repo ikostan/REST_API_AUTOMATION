@@ -40,7 +40,3 @@ class GetTestCase(unittest.TestCase):
 		response = requests.get(self.URL, auth=(username, password))
 		self.assertEqual(200, response.status_code)
 		self.assertListEqual(self.CARS_LIST, response.json()['cars_list'])
-
-
-if __name__ == "__main__":
-	unittest.main()
