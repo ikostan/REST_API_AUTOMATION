@@ -121,3 +121,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .idea/
+allure-report/
+allure-results/
