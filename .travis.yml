@@ -12,9 +12,10 @@ install:
     - "pip install pytest"
     - "pip install pytest-cov" #This plugin produces coverage reports
     - "pip install codecov" #install codecov
+before_script:
+  - python cars_app.py
 
 script:
-  - python cars_app.py
   - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
 
 env:
