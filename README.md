@@ -48,6 +48,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - [cars-api](https://github.com/qxf2/cars-api)
 - [Practice API automation](http://35.167.62.251/)
 - [Flask](https://www.fullstackpython.com/flask.html)
+- [Practice REST API automation with Python 3’s documentation](https://practice-rest-api-automation-with-python-3.readthedocs.io/en/latest/?badge=latest)
 
 ### Additional Tech Info Resources<br/>
 <a id="additional_tech_info_resources"></a>
