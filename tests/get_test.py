@@ -4,10 +4,15 @@
 Flask App REST API testing
 """
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import unittest
 import allure
 import requests
 import cars_app
+from tests.base_test import BaseTestCase
 
 
 @allure.epic('Simple Flask App')
@@ -16,23 +21,19 @@ import cars_app
 @allure.sub_suite("Positive Tests")
 @allure.feature("GET")
 @allure.story('Cars')
-class GetCarsTestCase(unittest.TestCase):
+class GetCarsTestCase(BaseTestCase):
 	"""
 	Simple Flask App Test: GET call > cars
 	"""
 
-	@classmethod
-	def setUpClass(cls) -> None:
+	def setUp(self) -> None:
 		"""
 		Test data preparation
 		:return:
 		"""
 
-		with allure.step("Set test URL"):
-			cls.URL = 'http://127.0.0.1:5000/cars'
-
 		with allure.step("Arrange expected results (cars list)"):
-			cls.CARS_HATCHBACK = [{"name": "Swift",
+			self.CARS_HATCHBACK = [{"name": "Swift",
 			                       "brand": "Maruti",
 			                       "price_range": "3-5 lacs",
 			                       "car_type": "hatchback"},
@@ -41,7 +42,7 @@ class GetCarsTestCase(unittest.TestCase):
 			                       "price_range": "8-14 lacs",
 			                       "car_type": "hatchback"}]
 
-			cls.CARS_SEDAN = [{"name": "City",
+			self.CARS_SEDAN = [{"name": "City",
 			                   "brand": "Honda",
 			                   "price_range": "3-6 lacs",
 			                   "car_type": "sedan"},
@@ -50,7 +51,7 @@ class GetCarsTestCase(unittest.TestCase):
 			                   "price_range": "7-10 lacs",
 			                   "car_type": "sedan"}]
 
-			cls.CARS_LIST = cls.CARS_HATCHBACK + cls.CARS_SEDAN
+			self.CARS_LIST = cls.CARS_HATCHBACK + cls.CARS_SEDAN
 
 	def test_get_list_of_cars_admin(self):
 		"""
