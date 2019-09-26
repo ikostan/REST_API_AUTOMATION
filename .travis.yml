@@ -1,0 +1,25 @@
+dist: xenial   # required for Python >= 3.7
+
+language: python
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
+install:
+    - "pip install pytest"
+    - "pip install pytest-cov" #This plugin produces coverage reports
+    - "pip install codecov" #install codecov
+
+script:
+  - python cars_app.py
+  - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+
+env:
+  #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
+
+after_success:
+  # Generates coverage report, public repo using Travis:
+  # Source: https://dev.to/j0nimost/using-codecov-with-travis-ci-pytest-cov-1dfj
+  - codecov
