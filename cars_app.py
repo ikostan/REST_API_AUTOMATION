@@ -24,6 +24,7 @@ import logging
 from random import SystemRandom
 import flask
 from flask import Flask, request, jsonify, abort, render_template
+from flask_restful import Resource, reqparse, Api
 
 
 app = Flask(__name__)
@@ -374,4 +375,4 @@ if __name__ == "__main__":
     a common idiom for conditionally executing code in a module
     when it is run as a script or with python -m but not when it is imported.
     """
-    app.run(debug=False)
+    app.run(debug=True)
