@@ -1,3 +1,5 @@
+#!/path/to/interpreter
+
 """Extract arguments from CLI"""
 
 #  Created by Egor Kostan.
