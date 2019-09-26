@@ -18,48 +18,45 @@ from utils.get_args_from_cli import get_args
 
 class BaseTestCase(unittest.TestCase):
 
-	@classmethod
-	def setUpClass(cls) -> None:
-		"""
-		1. Get Args from CLI
-		2. Set Test URL
-		3. Start REST API Service
-		:return:
-		"""
+    @classmethod
+    def setUpClass(cls) -> None:
+        """
+	    1. Get Args from CLI
+	    2. Set Test URL
+	    3. Start REST API Service
+	    :return:
+	    """
 
-		allure.dynamic.title("Test pre set-up")
+        allure.dynamic.title("Test pre set-up")
 
-		with allure.step("Get args from CLI"):
-			cls.args = get_args()
+        with allure.step("Get args from CLI"):
+            cls.args = get_args()
 
-		with allure.step("Set test URL"):
-			cls.URL = 'http://127.0.0.1:5000/cars'
+        with allure.step("Set test URL"):
+            cls.URL = 'http://127.0.0.1:5000/cars'
 
-		with allure.step("Start REST API Service"):
+        with allure.step("Start REST API Service"):
+            print("\nOS: {}\n".format(platform.system()))
 
-			print("OS: {}".format(platform.system()))
+            if platform.system() == 'Windows':
+                os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
 
-			if platform.system() == 'Windows':
-				os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
+            if platform.system() == 'Linux':
+                os.system("python3 ../cars_app.py &")
+                
+        time.sleep(5)
 
-			if platform.system() == 'Linux':
-				os.system("python ../cars_app.py")
-
-		time.sleep(5)
-
-	@classmethod
-	def tearDownClass(cls) -> None:
-		"""
+    @classmethod
+    def tearDownClass(cls) -> None:
+        """
 		1. Stop REST API Service
 		:return:
 		"""
+        allure.dynamic.title("Post test activities")
 
-		allure.dynamic.title("Post test activities")
+        with allure.step("Stop REST API Service"):
+            if platform.system() == 'Windows':
+                os.system('taskkill /F /IM python.exe')
 
-		with allure.step("Stop REST API Service"):
-
-			if platform.system() == 'Windows':
-				os.system('taskkill /F /IM python.exe')
-
-			if platform.system() == 'Linux':
-				os.system('pkill -f cars_app.py')
+            if platform.system() == 'Linux':
+                os.system('pkill -f cars_app.py')
