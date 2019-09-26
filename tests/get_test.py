@@ -8,7 +8,6 @@ Flask App REST API testing
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-import unittest
 import allure
 import requests
 import cars_app
