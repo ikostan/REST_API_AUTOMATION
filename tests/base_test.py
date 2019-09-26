@@ -7,6 +7,7 @@ Base Test Case
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import os
 import unittest
 import allure
@@ -31,7 +32,7 @@ class BaseTestCase(unittest.TestCase):
 			cls.URL = 'http://127.0.0.1:5000/cars'
 
 		with allure.step("Start REST API Service"):
-			os.system("start /B start cmd.exe @cmd /k python cars_app.py")
+			os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
 
 	@classmethod
 	def tearDownClass(cls) -> None:
