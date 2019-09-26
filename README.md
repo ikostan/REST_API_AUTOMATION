@@ -117,7 +117,7 @@ If everything goes right, you should see an output similar to the following:
 ### API endpoints and examples
 <a id="endpoints"></a>
 
-- TBD
+- For more details please [click here](https://practice-rest-api-automation-with-python-3.readthedocs.io/en/latest/cars_app.html)
 
 ### Tech Issues and Problem Solving:<br/>
 <a id="tech_issues"></a>
