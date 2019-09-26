@@ -24,7 +24,6 @@ import logging
 from random import SystemRandom
 import flask
 from flask import Flask, request, jsonify, abort, render_template
-from flask_restful import Resource, reqparse, Api
 
 
 app = Flask(__name__)
