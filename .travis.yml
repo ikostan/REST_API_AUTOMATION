@@ -14,7 +14,10 @@ install:
     - "pip install codecov" #install codecov
 
 before_script:
-  - python cars_app.py
+
+deploy:
+  skip_cleanup: true
+  run: "python cars_app.py"
 
 script:
   - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
