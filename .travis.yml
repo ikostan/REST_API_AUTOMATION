@@ -14,8 +14,7 @@ install:
     - "pip install codecov" #install codecov
 
 script:
-  - "python3 ../cars_app.py &"
-  - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+  - python ../cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
 
 env:
   #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
