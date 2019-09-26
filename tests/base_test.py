@@ -30,7 +30,8 @@ class BaseTestCase(unittest.TestCase):
         allure.dynamic.title("Test pre set-up")
 
         with allure.step("Get args from CLI"):
-            cls.args = get_args()
+            # cls.args = get_args()
+            pass
 
         with allure.step("Set test URL"):
             cls.URL = 'http://127.0.0.1:5000/cars'
@@ -43,7 +44,7 @@ class BaseTestCase(unittest.TestCase):
 
             if platform.system() == 'Linux':
                 os.system("python3 ../cars_app.py &")
-                
+
         time.sleep(5)
 
     @classmethod
