@@ -3,6 +3,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a3c971aa10e4e93b15944480cbf9b15)](https://www.codacy.com/manual/ikostan/REST_API_AUTOMATION?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ikostan/REST_API_AUTOMATION&amp;utm_campaign=Badge_Grade)
 [![Job Status](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/status?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/jobs/github.com/ikostan/REST_API_AUTOMATION/latest?completed=true&branch=master)
 [![Report](https://inspecode.rocro.com/badges/github.com/ikostan/REST_API_AUTOMATION/report?token=7Zs_YsesnPupoK5eFy0uLj0wOxa-2Om5_GYUKnSpvJA&branch=master)](https://inspecode.rocro.com/reports/github.com/ikostan/REST_API_AUTOMATION/branch/master/summary)
+[![Build Status](https://travis-ci.org/ikostan/REST_API_AUTOMATION.svg?branch=master)](https://travis-ci.org/ikostan/REST_API_AUTOMATION)
+
 
 # Practice REST API test automation with Python 3
 
