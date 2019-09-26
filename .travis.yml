@@ -8,15 +8,16 @@ python:
   - "3.7"
 
 install:
+    - "pip install -r requirements.txt"
     - "pip install flask"
-    - "pip install pytest"
     - "pip install pytest-cov" #This plugin produces coverage reports
     - "pip install codecov" #install codecov
+
 before_script:
-  - python cars_app.py
+  #
 
 script:
-  - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+  - python cars_app.py || pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
 
 env:
   #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
