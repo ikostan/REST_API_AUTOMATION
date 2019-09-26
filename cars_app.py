@@ -374,4 +374,4 @@ if __name__ == "__main__":
     a common idiom for conditionally executing code in a module
     when it is run as a script or with python -m but not when it is imported.
     """
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(debug=False)
