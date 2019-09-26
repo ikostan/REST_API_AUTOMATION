@@ -9,6 +9,8 @@ Base Test Case
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import os
+import platform
+import time
 import unittest
 import allure
 from utils.get_args_from_cli import get_args
@@ -25,6 +27,8 @@ class BaseTestCase(unittest.TestCase):
 		:return:
 		"""
 
+		allure.dynamic.title("Test pre set-up")
+
 		with allure.step("Get args from CLI"):
 			cls.args = get_args()
 
@@ -32,7 +36,16 @@ class BaseTestCase(unittest.TestCase):
 			cls.URL = 'http://127.0.0.1:5000/cars'
 
 		with allure.step("Start REST API Service"):
-			os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
+
+			print("OS: {}".format(platform.system()))
+
+			if platform.system() == 'Windows':
+				os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
+
+			if platform.system() == 'Linux':
+				os.system("python ../cars_app.py")
+
+		time.sleep(5)
 
 	@classmethod
 	def tearDownClass(cls) -> None:
@@ -41,5 +54,12 @@ class BaseTestCase(unittest.TestCase):
 		:return:
 		"""
 
+		allure.dynamic.title("Post test activities")
+
 		with allure.step("Stop REST API Service"):
-			os.system('taskkill /F /IM python.exe')
+
+			if platform.system() == 'Windows':
+				os.system('taskkill /F /IM python.exe')
+
+			if platform.system() == 'Linux':
+				os.system('pkill -f cars_app.py')
