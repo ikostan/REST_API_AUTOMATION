@@ -20,11 +20,6 @@ jobs: # A basic unit of work in a run
             pipenv install -r requirements.txt
             pipenv install flask
 
-      - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.6/site-packages"
       - run:
           name: run tests
           command: |
