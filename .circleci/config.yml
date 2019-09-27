@@ -4,7 +4,7 @@ jobs: # A basic unit of work in a run
     # directory where steps are run
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: circleci/python:3.6.2-stretch-browsers
+      - image: circleci/python:3.6.4
         environment: # environment variables for primary container
           FLASK_CONFIG: testing
           PIPENV_VENV_IN_PROJECT: true
@@ -20,6 +20,7 @@ jobs: # A basic unit of work in a run
             python3 -m venv venv
             . venv/bin/activate
             pipenv install -r requirements.txt
+            pipenv install flask
 
       - run:
           name: run tests
