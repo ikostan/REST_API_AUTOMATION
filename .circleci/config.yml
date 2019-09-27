@@ -16,9 +16,7 @@ jobs: # A basic unit of work in a run
           command: |
             sudo pip install --upgrade pip
             sudo pip install pipenv
-            sudo mkdir /home/circleci/project/test-results
-            python3 -m venv venv
-            . venv/bin/activate
+            sudo mkdir /home/circleci/project/test-resultse
             pipenv install -r requirements.txt
             pipenv install flask
 
