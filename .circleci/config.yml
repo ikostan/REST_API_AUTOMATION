@@ -6,6 +6,7 @@ jobs: # A basic unit of work in a run
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/python:3.6.2-stretch-browsers
         environment: # environment variables for primary container
+          FLASK_CONFIG: testing
           PIPENV_VENV_IN_PROJECT: true
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
@@ -16,6 +17,8 @@ jobs: # A basic unit of work in a run
             sudo pip install --upgrade pip
             sudo pip install pipenv
             sudo mkdir /home/circleci/project/test-results
+            python3 -m venv venv
+            . venv/bin/activate
             pipenv install -r requirements.txt
 
       - run:
