@@ -18,7 +18,6 @@ jobs: # A basic unit of work in a run
             sudo pip install pipenv
             sudo mkdir /home/circleci/project/test-resultse
             pipenv install -r requirements.txt
-            pipenv install flask
 
       - run:
           name: run tests
