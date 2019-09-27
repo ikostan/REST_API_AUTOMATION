@@ -19,8 +19,12 @@ jobs: # A basic unit of work in a run
             sudo mkdir /home/circleci/project/test-resultse
             pipenv install -r requirements.txt
             pipenv install flask
-            pipenv run
 
+      - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
       - run:
           name: run tests
           command: |
