@@ -21,7 +21,7 @@ jobs: # A basic unit of work in a run
       - run:
           name: run tests
           command: |
-            pipenv run python3 cars_app.py & pytest
+            pipenv run pytest
 
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results/
