@@ -23,6 +23,7 @@ jobs: # A basic unit of work in a run
       - run:
           name: run tests
           command: |
+            pip install flask
             python3 cars_app.py
             pipenv run pytest
 
