@@ -17,11 +17,11 @@ jobs: # A basic unit of work in a run
             sudo pip install pipenv
             sudo mkdir /home/circleci/project/test-results
             pipenv install -r requirements.txt
-      - run: python3 cars_app.py &
 
       - run:
           name: run tests
           command: |
+            python3 cars_app.py
             pipenv run pytest
 
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
