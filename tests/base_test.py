@@ -43,7 +43,8 @@ class BaseTestCase(unittest.TestCase):
                 os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
 
             if platform.system() == 'Linux':
-                # os.system("python3 ../cars_app.py &")
+                os.system('pkill -f cars_app.py')
+                os.system("python3 ../cars_app.py &")
                 pass
 
         time.sleep(5)
@@ -62,5 +63,5 @@ class BaseTestCase(unittest.TestCase):
                 pass
 
             if platform.system() == 'Linux':
-                # os.system('pkill -f cars_app.py')
+                os.system('pkill -f cars_app.py')
                 pass
