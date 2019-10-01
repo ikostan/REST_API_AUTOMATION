@@ -58,7 +58,9 @@ class BaseTestCase(unittest.TestCase):
 
         with allure.step("Stop REST API Service"):
             if platform.system() == 'Windows':
-                os.system('taskkill /F /IM python.exe')
+                # os.system('taskkill /F /IM python.exe')
+                pass
 
             if platform.system() == 'Linux':
-                os.system('pkill -f cars_app.py')
+                # os.system('pkill -f cars_app.py')
+                pass
