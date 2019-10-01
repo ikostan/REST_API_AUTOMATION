@@ -15,7 +15,7 @@ install:
     - "pip install -r requirements.txt"
     - "pip install flask"
     - "pip install pytest-cov" #This plugin produces coverage reports
-    - "pip install codecov" #install codecov
+    - "pip install codecov" # install codecov
     - "pip install coverage"
     - "npm install"
 
@@ -26,6 +26,7 @@ before_script:  # code coverage tool
 
 script:
   - python cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+  - os.system("python3 cars_app.py &") # kill API
   - coverage run cars_app.py test -v 2 --exclude-tag=selenium
 
 after_script:
