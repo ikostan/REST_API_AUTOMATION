@@ -19,7 +19,7 @@ from tests.base_test import BaseTestCase
 @allure.suite("REST API")
 @allure.sub_suite("Positive Tests")
 @allure.feature("GET")
-@allure.story('Cars')
+@allure.story('Get List of Cars')
 class GetCarsPositiveTestCase(BaseTestCase):
     """
     Simple Flask App Positive Test: GET call > cars
