@@ -19,7 +19,7 @@ from tests.base_test import BaseTestCase
 @allure.suite("REST API")
 @allure.sub_suite("Negative Tests")
 @allure.feature("GET")
-@allure.story('Cars')
+@allure.story('Get List of Cars')
 class GetCarsNegativeTestCase(BaseTestCase):
     """
     Simple Flask App Negative Test: GET call > cars
