@@ -19,8 +19,8 @@ from tests.base_test import BaseTestCase
 @allure.suite("REST API")
 @allure.sub_suite("Negative Tests")
 @allure.feature("PUT")
-@allure.story('Cars')
-class PutCarsNegativeTestCase(BaseTestCase):
+@allure.story('Update Car')
+class PutCarNegativeTestCase(BaseTestCase):
     """
     Simple Flask App Negative Test: PUT call > cars
     """
@@ -44,7 +44,7 @@ class PutCarsNegativeTestCase(BaseTestCase):
         :return:
         """
 
-        allure.dynamic.title("Get list of cars using wrong admin user credentials")
+        allure.dynamic.title("Update car using wrong admin user credentials")
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
@@ -73,7 +73,7 @@ class PutCarsNegativeTestCase(BaseTestCase):
         :return:
         """
 
-        allure.dynamic.title("Get list of cars using wrong non admin user credentials")
+        allure.dynamic.title("Update car using wrong non admin user credentials")
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
