@@ -1,7 +1,7 @@
 #!/path/to/interpreter
 
 """
-Flask App REST API testing
+Flask App REST API testing: PUT
 """
 
 #  Created by Egor Kostan.
@@ -27,7 +27,7 @@ class PutCarNegativeTestCase(BaseTestCase):
 
     def setUp(self) -> None:
 
-        self.put_url = '/update/Vento'
+        self.put_url = '/cars/update/Vento'
 
         self.original = {"name": "Vento", "brand": "Volkswagen",
                          "price_range": "7-10 lacs", "car_type": "sedan"}
