@@ -1,7 +1,7 @@
 #!/path/to/interpreter
 
 """
-Flask App REST API testing
+Flask App REST API testing: GET
 """
 
 #  Created by Egor Kostan.
@@ -25,6 +25,15 @@ class GetCarsNegativeTestCase(BaseTestCase):
     Simple Flask App Negative Test: GET call > cars
     """
 
+    def setUp(self) -> None:
+        """
+        Test data preparation
+        :return:
+        """
+
+        with allure.step("Prepare test data"):
+            self.cars_url = '/cars'
+
     def test_get_list_of_cars_admin_wrong_credentials(self):
         """
         Get full list of cars using wrong admin user credentials.
@@ -44,7 +53,7 @@ class GetCarsNegativeTestCase(BaseTestCase):
                              cars_app.user_list[0]['perm'])
 
         with allure.step("Send GET request with wrong credentials"):
-            response = requests.get(self.URL,
+            response = requests.get(self.URL + self.cars_url,
                                     auth=(username,
                                           password))
 
@@ -70,8 +79,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
         password = ''
 
         with allure.step("Send GET request with empty username/password"):
-            response = requests.get(self.URL, auth=(username,
-                                                    password))
+            response = requests.get(self.URL + self.cars_url,
+                                    auth=(username,
+                                          password))
 
         with allure.step("Verify status code"):
             self.assertEqual(401,
@@ -100,7 +110,7 @@ class GetCarsNegativeTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send GET request "):
-            response = requests.get(self.URL,
+            response = requests.get(self.URL + self.cars_url,
                                     auth=(username,
                                           password))
 
@@ -130,7 +140,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send GET request with wrong credentials"):
-            response = requests.get(self.URL + '/filter/sedan',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/filter/sedan',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -156,7 +168,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
         password = ''
 
         with allure.step("Send GET request with wrong credentials"):
-            response = requests.get(self.URL + '/filter/sedan',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/filter/sedan',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -185,7 +199,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
                              cars_app.user_list[0]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/filter/hatchback',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/filter/hatchback',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -214,7 +230,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/Swift',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/Swift',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -240,7 +258,9 @@ class GetCarsNegativeTestCase(BaseTestCase):
         password = ''
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/Swift',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/Swift',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
