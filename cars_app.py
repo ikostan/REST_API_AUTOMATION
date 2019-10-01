@@ -47,9 +47,7 @@ cars_list = [{"name": "Swift", "brand": "Maruti",
              {"name": "City", "brand": "Honda",
               "price_range": "3-6 lacs", "car_type": "sedan"},
              {"name": "Vento", "brand": "Volkswagen",
-              "price_range": "7-10 lacs", "car_type": "sedan"},
-             {'name': 'Vento', 'brand': 'Ford',
-              'price_range': '1-3 lacs', 'car_type': 'suv'}]
+              "price_range": "7-10 lacs", "car_type": "sedan"}]
 
 user_list = [{"name": "qxf2", "password": "qxf2", "perm": "admin"},
              {"name": "eric", "password": "testqxf2", "perm": "non_admin"},
