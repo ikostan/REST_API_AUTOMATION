@@ -369,11 +369,11 @@ def get_user_list():
 
 
 if __name__ == "__main__":
-    """
-    Top-level script environment.
-    A module can discover whether or not it is running in
-    the main scope by checking its own __name__, which allows
-    a common idiom for conditionally executing code in a module
-    when it is run as a script or with python -m but not when it is imported.
-    """
+
+    # Top-level script environment.
+    # A module can discover whether or not it is running in
+    # the main scope by checking its own __name__, which allows
+    # a common idiom for conditionally executing code in a module
+    # when it is run as a script or with python -m but not when it is imported.
+
     app.run(debug=False)
