@@ -13,7 +13,9 @@ import platform
 import time
 import unittest
 import allure
-from utils.get_args_from_cli import get_args
+
+
+# from utils.get_args_from_cli import get_args
 
 
 class BaseTestCase(unittest.TestCase):
@@ -53,13 +55,11 @@ class BaseTestCase(unittest.TestCase):
         :return:
         """
 
-        '''
-        with allure.step("Stop REST API Service"):
-            if platform.system() == 'Windows':
-                os.system('taskkill /F /IM python.exe')
+        # with allure.step("Stop REST API Service"):
+        # if platform.system() == 'Windows':
+        # os.system('taskkill /F /IM python.exe')
 
-            if platform.system() == 'Linux':
-                os.system('pkill -f cars_app.py')
-        '''
+        # if platform.system() == 'Linux':
+        # os.system('pkill -f cars_app.py')
 
         pass
