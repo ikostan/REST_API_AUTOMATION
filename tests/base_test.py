@@ -44,7 +44,7 @@ class BaseTestCase(unittest.TestCase):
 
             if platform.system() == 'Linux':
                 # os.system("python ../cars_app.py &")
-                # pass
+                pass
 
         time.sleep(5)
 
@@ -63,4 +63,4 @@ class BaseTestCase(unittest.TestCase):
 
             if platform.system() == 'Linux':
                 # os.system('pkill -f cars_app.py')
-                # pass
+                pass
