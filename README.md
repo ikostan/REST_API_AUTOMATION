@@ -175,7 +175,7 @@ virtualenv venv --python=python
 <details>
   <summary><b>Setting up Python3 virtual environment on Linx (Ubuntu) machine</b></summary>
 
-### How to install virtualenv:
+### How to install virtualenv
 
 1. Install **pip** first
 ```bash
