@@ -6,7 +6,8 @@
 [![CircleCI](https://circleci.com/gh/ikostan/REST_API_AUTOMATION.svg?style=svg)](https://circleci.com/gh/ikostan/REST_API_AUTOMATION)
 [![Build Status](https://travis-ci.org/ikostan/REST_API_AUTOMATION.svg?branch=master)](https://travis-ci.org/ikostan/REST_API_AUTOMATION)
 [![codecov](https://codecov.io/gh/ikostan/REST_API_AUTOMATION/branch/master/graph/badge.svg)](https://codecov.io/gh/ikostan/REST_API_AUTOMATION)
-
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 # Practice REST API test automation with Python 3
 
