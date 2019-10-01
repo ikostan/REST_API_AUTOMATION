@@ -29,11 +29,25 @@ class PutCarsPositiveTestCase(BaseTestCase):
 
         self.put_url = '/update/Vento'
 
+        self.original = {"name": "Vento", "brand": "Volkswagen",
+                         "price_range": "7-10 lacs", "car_type": "sedan"}
+
         self.updated1 = {'name': 'Vento', 'brand': 'Ford',
-                        'price_range': '2-3 lacs', 'car_type': 'sedan'}
+                         'price_range': '2-3 lacs', 'car_type': 'sedan'}
 
         self.updated2 = {'name': 'Vento', 'brand': 'Ford',
                          'price_range': '3-5 lacs', 'car_type': 'convertible'}
+
+    def tearDown(self) -> None:
+
+        username = cars_app.user_list[0]['name']
+        password = cars_app.user_list[0]['password']
+
+        with allure.step("Restore original cars list"):
+            requests.put(self.URL + self.put_url,
+                         json=self.original,
+                         auth=(username,
+                               password))
 
     def test_put_update_car_admin(self):
         """
