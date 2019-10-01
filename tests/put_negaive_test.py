@@ -83,10 +83,6 @@ class PutCarNegativeTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send PUT request"):
-            response = requests.put(self.URL, auth=(username,
-                                                    password))
-
-        with allure.step("Send PUT request"):
             response = requests.put(self.URL + self.put_url,
                                     json=self.updated2,
                                     auth=(username,
