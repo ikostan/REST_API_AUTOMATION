@@ -1,7 +1,7 @@
 #!/path/to/interpreter
 
 """
-Flask App REST API testing
+Flask App REST API testing: GET
 """
 
 #  Created by Egor Kostan.
@@ -33,6 +33,8 @@ class GetCarsPositiveTestCase(BaseTestCase):
 
         with allure.step("Arrange expected results (cars list)"):
 
+            self.cars_url = '/cars'
+
             self.CARS_HATCHBACK = [car for car in cars_app.cars_list if car["car_type"] == 'hatchback']
 
             self.CARS_SEDAN = [car for car in cars_app.cars_list if car["car_type"] == 'sedan']
@@ -56,8 +58,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
                              cars_app.user_list[0]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL, auth=(username,
-                                                    password))
+            response = requests.get(self.URL + self.cars_url,
+                                    auth=(username,
+                                          password))
 
         with allure.step("Verify status code"):
             self.assertEqual(200,
@@ -87,8 +90,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL, auth=(username,
-                                                    password))
+            response = requests.get(self.URL + self.cars_url,
+                                    auth=(username,
+                                          password))
 
         with allure.step("Verify status code"):
             self.assertEqual(200,
@@ -119,7 +123,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
                              cars_app.user_list[1]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/filter/sedan',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/filter/sedan',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -148,7 +154,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
                              cars_app.user_list[0]['perm'])
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/filter/hatchback',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/filter/hatchback',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
@@ -183,7 +191,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
                    "price_range": "3-5 lacs"}
 
         with allure.step("Send GET request"):
-            response = requests.get(self.URL + '/Swift',
+            response = requests.get(self.URL +
+                                    self.cars_url +
+                                    '/Swift',
                                     auth=(username, password))
 
         with allure.step("Verify status code"):
