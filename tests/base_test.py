@@ -32,7 +32,7 @@ class BaseTestCase(unittest.TestCase):
             pass
 
         with allure.step("Set test URL"):
-            cls.URL = 'http://127.0.0.1:5000/cars'
+            cls.URL = 'http://127.0.0.1:5000'
 
         with allure.step("Start REST API Service"):
             print("\nOS: {}\n".format(platform.system()))
