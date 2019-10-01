@@ -9,7 +9,6 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d1e9166ec77f9ed03536/test_coverage)](https://codeclimate.com/github/ikostan/REST_API_AUTOMATION/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d1e9166ec77f9ed03536/maintainability)](https://codeclimate.com/github/ikostan/REST_API_AUTOMATION/maintainability)
 
-
 # Practice REST API test automation with Python 3
 
 <div align="center"> 
