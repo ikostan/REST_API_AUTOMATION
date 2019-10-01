@@ -25,8 +25,8 @@ before_script:  # code coverage tool
   - ./cc-test-reporter before-build
 
 script:
-  # - python cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
-  - coverage run cars_app.py test -v 2 --exclude-tag=selenium
+  - python cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+  # - coverage run cars_app.py test -v 2 --exclude-tag=selenium
 
 after_script:
   - coverage xml
