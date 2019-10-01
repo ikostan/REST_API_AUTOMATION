@@ -7,17 +7,30 @@ python:
   - "3.6"
   - "3.7"
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=a9235ff1dface4544cdc753cd5ff7baa613bc354d3153b8f6bdbc9a642b6b60c
+
 install:
     - "pip install -r requirements.txt"
     - "pip install flask"
     - "pip install pytest-cov" #This plugin produces coverage reports
     - "pip install codecov" #install codecov
+    - "pip install coverage"
+    - "npm install"
+
+before_script:  # code coverage tool
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 script:
   - python cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+  - coverage run cars_app.py test -v 2 --exclude-tag=selenium
 
-env:
-  #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
+after_script:
+  - coverage xml
+  - if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_PYTHON_VERSION" == "3.7" ]]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
 
 after_success:
   # Generates coverage report, public repo using Travis:
