@@ -29,9 +29,6 @@ class PutCarsPositiveTestCase(BaseTestCase):
 
         self.put_url = '/update/Vento'
 
-        self.original = {'name': 'Vento', 'brand': 'Ford',
-                         'price_range': '1-3 lacs', 'car_type': 'suv'}
-
         self.updated1 = {'name': 'Vento', 'brand': 'Ford',
                         'price_range': '2-3 lacs', 'car_type': 'sedan'}
 
