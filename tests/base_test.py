@@ -27,8 +27,6 @@ class BaseTestCase(unittest.TestCase):
         :return:
         """
 
-        allure.dynamic.title("Test pre set-up")
-
         with allure.step("Get args from CLI"):
             # cls.args = get_args()
             pass
@@ -54,13 +52,14 @@ class BaseTestCase(unittest.TestCase):
         1. Stop REST API Service
         :return:
         """
-        allure.dynamic.title("Post test activities")
 
+        '''
         with allure.step("Stop REST API Service"):
             if platform.system() == 'Windows':
-                # os.system('taskkill /F /IM python.exe')
-                pass
+                os.system('taskkill /F /IM python.exe')
 
             if platform.system() == 'Linux':
-                # os.system('pkill -f cars_app.py')
-                pass
+                os.system('pkill -f cars_app.py')
+        '''
+
+        pass
