@@ -32,6 +32,7 @@ class GetCarsPositiveTestCase(BaseTestCase):
         """
 
         with allure.step("Arrange expected results (cars list)"):
+
             self.CARS_HATCHBACK = [{"name": "Swift",
                                     "brand": "Maruti",
                                     "price_range": "3-5 lacs",
@@ -50,7 +51,7 @@ class GetCarsPositiveTestCase(BaseTestCase):
                                 "price_range": "7-10 lacs",
                                 "car_type": "sedan"}]
 
-            self.CARS_LIST = self.CARS_HATCHBACK + self.CARS_SEDAN
+            self.CARS_LIST = cars_app.cars_list
 
     def test_get_list_of_cars_admin(self):
         """
