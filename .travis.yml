@@ -26,9 +26,7 @@ before_script:  # code coverage tool
 
 script:
   - python cars_app.py & pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
-  - os.system('pkill -f cars_app.py') # kill API
   - coverage run cars_app.py test -v 2 --exclude-tag=selenium
-  - os.system('pkill -f cars_app.py') # kill API
 
 after_script:
   - coverage xml
