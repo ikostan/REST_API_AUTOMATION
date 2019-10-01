@@ -201,7 +201,7 @@ virtualenv venv --python=python
 
 5. Active your virtual environment:
 
- ```bash
+```bash
     source venv/bin/activate
 ```
 
@@ -312,4 +312,3 @@ git commit -m "fixed untracked files"
 
 [Source](https://www.youtube.com/watch?v=b4iFyrLQQh4)
 </details>
-
