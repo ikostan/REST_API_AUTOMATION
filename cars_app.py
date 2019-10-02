@@ -36,11 +36,11 @@ It is not creating log directory if dir does not exist.
 
 if not os.path.exists('log'):
     os.makedirs('log')
-file_handler = logging.FileHandler('log/app.log')
-app.logger.addHandler(file_handler)
+FILE_HANDLER = logging.FileHandler('log/app.log')
+app.logger.addHandler(FILE_HANDLER)
 app.logger.setLevel(logging.INFO)
 
-cars_list = [{"name": "Swift", "brand": "Maruti",
+CARS_LIST = [{"name": "Swift", "brand": "Maruti",
               "price_range": "3-5 lacs", "car_type": "hatchback"},
              {"name": "Creta", "brand": "Hyundai",
               "price_range": "8-14 lacs", "car_type": "hatchback"},
@@ -49,7 +49,7 @@ cars_list = [{"name": "Swift", "brand": "Maruti",
              {"name": "Vento", "brand": "Volkswagen",
               "price_range": "7-10 lacs", "car_type": "sedan"}]
 
-user_list = [{"name": "qxf2", "password": "qxf2", "perm": "admin"},
+USER_LIST = [{"name": "qxf2", "password": "qxf2", "perm": "admin"},
              {"name": "eric", "password": "testqxf2", "perm": "non_admin"},
              {"name": "morgan", "password": "testqxf2", "perm": "non_admin"},
              {"name": "jack", "password": "qxf2", "perm": "non_admin"}]
@@ -64,7 +64,7 @@ def check_auth(username, password):
     :param password:
     :return: True/False
     """
-    user = [user for user in user_list if user['name']
+    user = [user for user in USER_LIST if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
         return True
@@ -98,6 +98,12 @@ def requires_auth(f):
     """
     @wraps(f)
     def decorated(*args, **kwargs):
+        """
+        Decorated function
+        :param args:
+        :param kwargs:
+        :return:
+        """
         auth = request.authorization
         auth_flag = True
 
@@ -118,7 +124,7 @@ def requires_perm():
     """
     auth = request.authorization
     perm_flag = False
-    for user in user_list:
+    for user in USER_LIST:
         if user['name'] == auth.username and user['perm'] == 'admin':
             perm_flag = True
             return perm_flag
@@ -146,7 +152,7 @@ def get_cars():
     response = requests.get(url='http://127.0.0.1:5000/cars',
     auth=(username,password))
     """
-    return flask.jsonify({"cars_list": cars_list, 'successful': True})
+    return flask.jsonify({"cars_list": CARS_LIST, 'successful': True})
 
 
 @app.route("/cars/<name>", methods=["GET"])
@@ -161,7 +167,7 @@ def get_car_details(name):
     response = requests.get(url='http://127.0.0.1:5000/cars/Swift',
     auth=(username,password))
     """
-    car = [car for car in cars_list if car['name'] == name]
+    car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) == 0:
         resp = jsonify({'message': 'No car found', 'successful': False}), 200
     else:
@@ -181,7 +187,7 @@ def get_car():
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
             and brand != "" and brand is not None:
-        car = [car for car in cars_list if car['name'] == car_name]
+        car = [car for car in CARS_LIST if car['name'] == car_name]
         if len(car) == 0:
             resp = jsonify({'message': 'No car found',
                             'successful': False}), 200
@@ -215,7 +221,7 @@ def add_car():
         'price_range': request.json['price_range'],
         'car_type': request.json['car_type']
     }
-    cars_list.append(car)
+    CARS_LIST.append(car)
     resp = jsonify({'car': car, 'successful': True}), 200
 
     return resp
@@ -236,7 +242,7 @@ def update_car(name):
     auth=(username,password))
     """
     resp = {}
-    car = [car for car in cars_list if car['name'] == name]
+    car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) != 0:
         if not request.json or 'name' not in request.json:
             resp['message'], resp['successful'] = 'Not a json'
@@ -269,10 +275,10 @@ def remove_car(name):
     url='http://127.0.0.1:5000/register/cars/remove/City',
     auth=(username,password))
     """
-    car = [car for car in cars_list if car['name'] == name]
+    car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) == 0:
         abort(404)
-    cars_list.remove(car[0])
+    CARS_LIST.remove(car[0])
 
     return jsonify({'car': car[0], 'successful': True}), 200
 
@@ -288,7 +294,7 @@ def register_car():
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
             and brand != "" and brand is not None:
-        car = [car for car in cars_list if car['name'] == car_name]
+        car = [car for car in CARS_LIST if car['name'] == car_name]
     customer_details = {
         'customer_name': request.json['customer_name'],
         'city': request.json['city']
@@ -345,7 +351,7 @@ def filter_cars(car_type):
     url='http://127.0.0.1:5000/cars/filter/hatchback',
     auth=(username,password))
     """
-    filtered_list = [car for car in cars_list if car['car_type'] == car_type]
+    filtered_list = [car for car in CARS_LIST if car['car_type'] == car_type]
 
     return jsonify({'cars': filtered_list})
 
@@ -362,7 +368,7 @@ def get_user_list():
     auth=(username,password))
     """
     if requires_perm() is True:
-        return jsonify({'user_list': user_list, 'successful': True}), 200
+        return jsonify({'user_list': USER_LIST, 'successful': True}), 200
 
     return jsonify({'message': 'You are not permitted to access this resource',
                     'successful': False}), 403
