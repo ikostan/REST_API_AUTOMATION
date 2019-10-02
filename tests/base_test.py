@@ -41,12 +41,11 @@ class BaseTestCase(unittest.TestCase):
 
             if platform.system() == 'Windows':
                 os.system("start /B start cmd.exe @cmd /k python ../api/cars_app.py")
+                time.sleep(5)
 
             if platform.system() == 'Linux':
                 # os.system("python ../cars_app.py &")
                 pass
-
-        time.sleep(5)
 
     @classmethod
     def tearDownClass(cls) -> None:
