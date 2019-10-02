@@ -24,8 +24,8 @@ import os
 import flask
 import logging
 from random import SystemRandom
-from api.data import USER_LIST, CARS_LIST, registered_cars
-from api.internal_methods import requires_auth, requires_perm
+from .data import TestData
+from .internal_methods import requires_auth, requires_perm
 from flask import Flask, request, jsonify, abort, render_template
 
 
@@ -62,7 +62,7 @@ def get_cars():
     response = requests.get(url='http://127.0.0.1:5000/cars',
     auth=(username,password))
     """
-    return flask.jsonify({"cars_list": CARS_LIST, 'successful': True})
+    return flask.jsonify({"cars_list": TestData.CARS_LIST, 'successful': True})
 
 
 @app.route("/cars/<name>", methods=["GET"])
@@ -77,7 +77,7 @@ def get_car_details(name):
     response = requests.get(url='http://127.0.0.1:5000/cars/Swift',
     auth=(username,password))
     """
-    car = [car for car in CARS_LIST if car['name'] == name]
+    car = [car for car in TestData.CARS_LIST if car['name'] == name]
     if len(car) == 0:
         resp = jsonify({'message': 'No car found', 'successful': False}), 200
     else:
@@ -97,7 +97,7 @@ def get_car():
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
             and brand != "" and brand is not None:
-        car = [car for car in CARS_LIST if car['name'] == car_name]
+        car = [car for car in TestData.CARS_LIST if car['name'] == car_name]
         if len(car) == 0:
             resp = jsonify({'message': 'No car found',
                             'successful': False}), 200
@@ -131,7 +131,7 @@ def add_car():
         'price_range': request.json['price_range'],
         'car_type': request.json['car_type']
     }
-    CARS_LIST.append(car)
+    TestData.CARS_LIST.append(car)
     resp = jsonify({'car': car, 'successful': True}), 200
 
     return resp
@@ -152,7 +152,7 @@ def update_car(name):
     auth=(username,password))
     """
     resp = {}
-    car = [car for car in CARS_LIST if car['name'] == name]
+    car = [car for car in TestData.CARS_LIST if car['name'] == name]
     if len(car) != 0:
         if not request.json or 'name' not in request.json:
             resp['message'], resp['successful'] = 'Not a json'
@@ -185,10 +185,10 @@ def remove_car(name):
     url='http://127.0.0.1:5000/register/cars/remove/City',
     auth=(username,password))
     """
-    car = [car for car in CARS_LIST if car['name'] == name]
+    car = [car for car in TestData.CARS_LIST if car['name'] == name]
     if len(car) == 0:
         abort(404)
-    CARS_LIST.remove(car[0])
+    TestData.CARS_LIST.remove(car[0])
 
     return jsonify({'car': car[0], 'successful': True}), 200
 
@@ -204,7 +204,7 @@ def register_car():
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None \
             and brand != "" and brand is not None:
-        car = [car for car in CARS_LIST if car['name'] == car_name]
+        car = [car for car in TestData.CARS_LIST if car['name'] == car_name]
     customer_details = {
         'customer_name': request.json['customer_name'],
         'city': request.json['city']
@@ -216,7 +216,7 @@ def register_car():
     registered_car = {'car': car[0], 'customer_details': request.json,
                       'registration_token': cryptogen.randrange(0, 4),
                       'successful': True}
-    registered_cars.append(registered_car)
+    TestData.registered_cars.append(registered_car)
 
     return jsonify({'registered_car': registered_car})
 
@@ -228,7 +228,7 @@ def get_registered_cars():
     This will help test GET without url_params
     :return:
     """
-    return jsonify({'registered': registered_cars, 'successful': True})
+    return jsonify({'registered': TestData.registered_cars, 'successful': True})
 
 
 @app.route('/register/car/delete/', methods=['DELETE'])
@@ -243,7 +243,7 @@ def delete_registered_cars():
     response = requests.delete(url='http://127.0.0.1:5000/register/car/delete',
     auth=(username,password))
     """
-    del registered_cars[0]
+    del TestData.registered_cars[0]
 
     return jsonify({'successful': True}), 200
 
@@ -261,7 +261,7 @@ def filter_cars(car_type):
     url='http://127.0.0.1:5000/cars/filter/hatchback',
     auth=(username,password))
     """
-    filtered_list = [car for car in CARS_LIST if car['car_type'] == car_type]
+    filtered_list = [car for car in TestData.CARS_LIST if car['car_type'] == car_type]
 
     return jsonify({'cars': filtered_list})
 
@@ -278,7 +278,7 @@ def get_user_list():
     auth=(username,password))
     """
     if requires_perm() is True:
-        return jsonify({'user_list': USER_LIST, 'successful': True}), 200
+        return jsonify({'user_list': TestData.USER_LIST, 'successful': True}), 200
 
     return jsonify({'message': 'You are not permitted to access this resource',
                     'successful': False}), 403
