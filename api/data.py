@@ -21,3 +21,8 @@ class TestData:
                  {"name": "jack", "password": "qxf2", "perm": "non_admin"}]
 
     registered_cars = []
+
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    TestData()
