@@ -301,6 +301,59 @@ git commit -m "fixed untracked files"
 </details>
 
 <details>
+  <summary><b>Sphinx Documentation Set Up</b></summary>
+
+<br/>Step by step:
+
+1. Create docs directory
+2. Open cmd > Go to docs directory
+3. cmd > Run: sphinx-quickstart
+    **Note:** run with default answers
+4. Go to docs/conf.py
+5. Uncomment following lines:
+```python
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('.'))
+```
+6. Update extensions list as following:
+```python
+extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
+```
+7. Update template as following:
+```python
+html_theme = 'sphinx_rtd_theme'
+
+```
+8. Update sys.path.insert as following:
+```python
+sys.path.insert(0, os.path.abspath('..'))
+```
+9. Go to docs/index.rst > add modules, see example below:
+```bash
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+```
+10. Open cmd > run: 
+```python
+sphinx-apidoc -o . ..
+```
+11. cmd > Run: make html
+12. Install html template:
+```python
+pip install sphinx_rtd_theme
+```
+
+[Video Tutorial](https://www.youtube.com/watch?v=b4iFyrLQQh4)
+[Sphinx Documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
+[More Info](https://stackoverflow.com/questions/13516404/sphinx-error-unknown-directive-type-automodule-or-autoclass)
+</details>
+
+<details>
   <summary><b>Auto-Generated Python Documentation with Sphinx</b></summary>
 
 <br/>Step by step:
