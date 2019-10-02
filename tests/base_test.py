@@ -40,7 +40,7 @@ class BaseTestCase(unittest.TestCase):
             print("\nOS: {}\n".format(platform.system()))
 
             if platform.system() == 'Windows':
-                os.system("start /B start cmd.exe @cmd /k python ../cars_app.py")
+                os.system("start /B start cmd.exe @cmd /k python ../cars_app/cars_app.py")
 
             if platform.system() == 'Linux':
                 # os.system("python ../cars_app.py &")
