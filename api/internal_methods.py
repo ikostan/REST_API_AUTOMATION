@@ -3,7 +3,7 @@
 """REST API app internal methods"""
 
 from functools import wraps
-from api.data import USER_LIST
+from .data import USER_LIST
 from flask import request, jsonify
 
 
