@@ -12,22 +12,6 @@ api.cars\_app module
    :undoc-members:
    :show-inheritance:
 
-api.data module
----------------
-
-.. automodule:: api.data
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-api.internal\_methods module
-----------------------------
-
-.. automodule:: api.internal_methods
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 
 Module contents
 ---------------
