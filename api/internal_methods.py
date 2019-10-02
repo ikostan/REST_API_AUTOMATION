@@ -3,7 +3,7 @@
 """REST API app internal methods"""
 
 from functools import wraps
-from .data import USER_LIST
+from data import TestData
 from flask import request, jsonify
 
 
@@ -14,7 +14,7 @@ def check_auth(username, password):
     :param password:
     :return: True/False
     """
-    user = [user for user in USER_LIST if user['name']
+    user = [user for user in TestData.USER_LIST if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
         return True
@@ -74,7 +74,7 @@ def requires_perm():
     """
     auth = request.authorization
     perm_flag = False
-    for user in USER_LIST:
+    for user in TestData.USER_LIST:
         if user['name'] == auth.username and user['perm'] == 'admin':
             perm_flag = True
             return perm_flag
