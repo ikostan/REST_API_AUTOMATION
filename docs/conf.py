@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Test Automation for REST API App'
+project = 'Practice REST API test automation with Python 3'
 copyright = '2019, Egor Kostan'
 author = 'Egor Kostan'
 
