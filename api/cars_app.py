@@ -24,8 +24,8 @@ import os
 import flask
 import logging
 from random import SystemRandom
-from .data import TestData
-from .internal_methods import requires_auth, requires_perm
+from data import TestData
+from internal_methods import requires_auth, requires_perm
 from flask import Flask, request, jsonify, abort, render_template
 
 
