@@ -12,6 +12,7 @@ import allure
 import requests
 import cars_app
 from tests.base_test import BaseTestCase
+from cars_app.cars_app import CARS_LIST, USER_LIST
 
 
 @allure.epic('Simple Flask App')
@@ -40,8 +41,8 @@ class PutCarPositiveTestCase(BaseTestCase):
 
     def tearDown(self) -> None:
 
-        username = cars_app.USER_LIST[0]['name']
-        password = cars_app.USER_LIST[0]['password']
+        username = USER_LIST[0]['name']
+        password = USER_LIST[0]['password']
 
         with allure.step("Restore original cars list"):
             requests.put(self.URL + self.put_url,
@@ -59,10 +60,10 @@ class PutCarPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[0]['name']
-            password = cars_app.USER_LIST[0]['password']
+            username = USER_LIST[0]['name']
+            password = USER_LIST[0]['password']
             self.assertEqual("admin",
-                             cars_app.USER_LIST[0]['perm'])
+                             USER_LIST[0]['perm'])
 
         with allure.step("Send PUT request"):
             response = requests.put(self.URL + self.put_url,
@@ -91,10 +92,10 @@ class PutCarPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[1]['name']
-            password = cars_app.USER_LIST[1]['password']
+            username = USER_LIST[1]['name']
+            password = USER_LIST[1]['password']
             self.assertEqual("non_admin",
-                             cars_app.USER_LIST[1]['perm'])
+                             USER_LIST[1]['perm'])
 
         with allure.step("Send PUT request"):
             response = requests.put(self.URL + self.put_url,
