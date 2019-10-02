@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Test Automation for  REST API App'
+project = 'Test Automation for REST API App'
 copyright = '2019, Egor Kostan'
 author = 'Egor Kostan'
 
@@ -31,6 +31,7 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
