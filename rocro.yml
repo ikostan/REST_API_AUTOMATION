@@ -5,5 +5,5 @@ inspecode:
       python: 3.6.0
   pycodestyle: default
   pylint:
-    ignore: 'docs\*'
+    ignore: 'docs/*'
   pytest: default
