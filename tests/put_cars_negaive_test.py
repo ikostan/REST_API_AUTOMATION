@@ -11,7 +11,7 @@ Flask App REST API testing: PUT
 import allure
 import requests
 from tests.base_test import BaseTestCase
-from api.data import USER_LIST
+from api.data import TestData
 
 
 @allure.epic('Simple Flask App')
@@ -48,10 +48,10 @@ class PutCarNegativeTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = USER_LIST[0]['name']
-            password = USER_LIST[1]['password']
+            username = TestData.USER_LIST[0]['name']
+            password = TestData.USER_LIST[1]['password']
             self.assertEqual("admin",
-                             USER_LIST[0]['perm'])
+                             TestData.USER_LIST[0]['perm'])
 
         with allure.step("Send PUT request"):
             response = requests.put(self.URL + self.put_url,
@@ -77,10 +77,10 @@ class PutCarNegativeTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = USER_LIST[1]['name']
-            password = USER_LIST[3]['password']
+            username = TestData.USER_LIST[1]['name']
+            password = TestData.USER_LIST[3]['password']
             self.assertEqual("non_admin",
-                             USER_LIST[1]['perm'])
+                             TestData.USER_LIST[1]['perm'])
 
         with allure.step("Send PUT request"):
             response = requests.put(self.URL + self.put_url,
