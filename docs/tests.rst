@@ -36,6 +36,14 @@ tests.post\_cars\_positive\_test module
    :undoc-members:
    :show-inheritance:
 
+tests.post\_cars\_negative\_test module
+---------------------------------------
+
+.. automodule:: tests.post_cars_negative_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 tests.put\_cars\_negaive\_test module
 -------------------------------------
 
