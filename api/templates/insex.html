@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cars API</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .thin-text {
+            font-family: Abel, Arial, sans-serif;
+            font-weight: lighter;
+        }
+        .white-text {
+            color: #ffffff;
+        }
+        .top-space {
+            margin-top: 25px;
+        }
+        p {
+            line-height: 2.0;
+            }
+         .grey-text {
+            color: #808080;
+        }
+        .endpoint {
+            color: #c7254e;
+            }
+        .cmdline {
+            color: #c7254e;;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <div class=container>
+        <div class="row">
+            <div class="col-md-10 offset-md-1 top-space">
+                <h1 class="thin-text text-center">Practice API automation</h1>
+                <br>
+                <p class="text-justify">This REST application written in Python was built to help testers learn to write API automation. The application has endpoints for you to practice automating GET, POST, PUT and DELETE methods. We have also included permissioning and authentication too. This web application was developed by <a href="https://www.qxf2.com/?utm_source=carsapi&utm_medium=click&utm_campaign=From%20carspai">Qxf2 Services</a>.<br><br><strong>Note:</strong> You can look at the username/password combinations in the <strong>user_list</strong> variable in <a href="https://github.com/qxf2/cars-api/blob/master/cars_app.py">this file</a>.</p>
+                <br>
+                <br>
+                <h2 class="thin-text">Setup</h2>
+                <p class="text-justify">Since we don't want other people's tests interfering with your tests, we recommend you get setup with this application locally. It's easy and takes less than 15-minutes for absolute beginners. So, don't worry!
+                <ol type="1">
+                    <li>In your terminal prompt, <span class="cmdline">pip install flask</span></li>
+                    <li>If you know git, <span class="cmdline">git clone https://github.com/qxf2/cars-api.git</span></li>
+                    <li>If you don't know git, copy the contents of <a href="https://github.com/qxf2/cars-api/blob/master/cars_app.py">this file</a> and save it (anywhere) as <span class="cmdline">cars_app.py</span></li>
+                    <li>In your terminal prompt, <span class="cmdline">cd directory_that_has_cars_app_py</span></li>
+                    <li>In your terminal prompt,  <span class="cmdline">python cars_app.py</span></li>
+                </ol>
+                If everything goes right, you should see an output similar to the following image:
+                <img src="/static/img/cars_api_started.png">
+                </p>
+                <br>
+                <br>
+
+                <h2 class="thin-text">API endpoints and examples</h2>
+                <p class="text-justify">This section lists the API endpoints present. It also lists the call you would make with Python's requests library.</p>
+
+                <h4 class="thin-text">1. GET</h4>
+                <br>
+                a) <strong class="thin-text endpoint"> /cars</strong>: Get a list of cars
+                <pre>
+                    <code class="python">
+import requests
+response = requests.get(url='http://127.0.0.1:5000/cars',auth=(username,password))
+                    </code>
+                </pre>
+                b) <strong class="thin-text endpoint"> /users</strong>: Get the list of users
+                <pre>
+                    <code class="python">
+import requests
+response = requests.get(url='http://127.0.0.1:5000/users',auth=(username,password))
+                    </code>
+                </pre>
+                c) <strong class="thin-text endpoint">
+                        /cars/filter/<%car_type%> </strong>: Get the list of users
+                <pre>
+                    <code class="python">
+import requests
+response = requests.get(url='http://127.0.0.1:5000/cars/filter/hatchback',auth=(username,password))
+                    </code>
+                </pre>
+                d) <strong class="thin-text endpoint"> /register </strong>: Get registered cars
+                <pre>
+                    <code class="python">
+import requests
+response = requests.get(url='http://127.0.0.1:5000/register',auth=(username,password))
+                    </code>
+                </pre>
+                e) <strong class="thin-text endpoint"> /cars/<%name%> </strong>: Get cars by name
+                <pre>
+                    <code class="python">
+import requests
+response = requests.get(url='http://127.0.0.1:5000/cars/Swift',auth=(username,password))
+                    </code>
+                </pre>
+                <br>
+                <h4 class="thin-text">2. POST</h4>
+                <br>
+                a) <strong class="thin-text endpoint"> /cars/add</strong>: Add new cars
+                <pre>
+                    <code class="python">
+import requests
+response = requests.post(url='http://127.0.0.1:5000/cars/add',json={'name':'figo','brand':'Ford','price_range':'2-3lacs','car_type':'hatchback'},auth=(username,password))
+                    </code>
+                </pre>
+                b) <strong class="thin-text endpoint"> /register/car</strong>: Register a car
+                <pre>
+                    <code class="python">
+import requests
+response = requests.post(url='http://127.0.0.1:5000/register/car',params={'car_name':'figo','brand':'Ford'},json={'customer_name': 'Unai Emery','city': 'London'},auth=(username,password))
+                    </code>
+                </pre>
+                <br>
+                <h4 class="thin-text">3. PUT</h4>
+                <br>
+                a) <strong class="thin-text endpoint"> /cars/update/<%name%></strong>: Add new cars
+                <pre>
+                    <code class="python">
+import requests
+esponse = requests.post(url='http://127.0.0.1:5000/cars/add',json={'name':'figo','brand':'Ford','price_range':'2-3lacs','car_type':'hatchback'},auth=(username,password))
+                    </code>
+                </pre>
+                <br>
+                <h4 class="thin-text">4. DELETE</h4>
+                <br>
+                a) <strong class="thin-text endpoint">/cars/remove/<%name%></strong>: Add new cars
+                <pre>
+                    <code class="python">
+import requests
+response = requests.delete(url='http://127.0.0.1:5000/register/cars/remove/City',auth=(username,password))
+                    </code>
+                </pre>
+                b) <strong class="thin-text endpoint"> /register/car/delete</strong>: Delete first entry in car registration list
+                <pre>
+                    <code class="python">
+import requests
+response = requests.delete(url='http://127.0.0.1:5000/register/car/delete',auth=(username,password))
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
