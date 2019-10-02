@@ -11,7 +11,7 @@ Flask App REST API testing: GET
 import allure
 import requests
 from tests.base_test import BaseTestCase
-from cars_app.cars_app import USER_LIST
+from api.data import USER_LIST
 
 
 @allure.epic('Simple Flask App')
