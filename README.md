@@ -307,7 +307,7 @@ git commit -m "fixed untracked files"
 
 1. Create docs directory
 2. Open cmd > Go to docs directory
-3. cmd > Run: sphinx-quickstart<\br>
+3. cmd > Run: sphinx-quickstart <\br>
     **Note:** run with default answers
 4. Go to docs/conf.py
 5. Uncomment following lines:
