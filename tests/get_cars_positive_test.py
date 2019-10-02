@@ -12,6 +12,7 @@ import allure
 import requests
 import cars_app
 from tests.base_test import BaseTestCase
+from cars_app.cars_app import CARS_LIST, USER_LIST
 
 
 @allure.epic('Simple Flask App')
@@ -35,11 +36,11 @@ class GetCarsPositiveTestCase(BaseTestCase):
 
             self.cars_url = '/cars'
 
-            self.CARS_HATCHBACK = [car for car in cars_app.CARS_LIST if car["car_type"] == 'hatchback']
+            self.CARS_HATCHBACK = [car for car in CARS_LIST if car["car_type"] == 'hatchback']
 
-            self.CARS_SEDAN = [car for car in cars_app.CARS_LIST if car["car_type"] == 'sedan']
+            self.CARS_SEDAN = [car for car in CARS_LIST if car["car_type"] == 'sedan']
 
-            self.CARS_LIST = cars_app.CARS_LIST
+            self.CARS_LIST = CARS_LIST
 
     def test_get_list_of_cars_admin(self):
         """
@@ -52,10 +53,10 @@ class GetCarsPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[0]['name']
-            password = cars_app.USER_LIST[0]['password']
+            username = USER_LIST[0]['name']
+            password = USER_LIST[0]['password']
             self.assertEqual("admin",
-                             cars_app.USER_LIST[0]['perm'])
+                             USER_LIST[0]['perm'])
 
         with allure.step("Send GET request"):
             response = requests.get(self.URL + self.cars_url,
@@ -84,10 +85,10 @@ class GetCarsPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[1]['name']
-            password = cars_app.USER_LIST[1]['password']
+            username = USER_LIST[1]['name']
+            password = USER_LIST[1]['password']
             self.assertEqual("non_admin",
-                             cars_app.USER_LIST[1]['perm'])
+                             USER_LIST[1]['perm'])
 
         with allure.step("Send GET request"):
             response = requests.get(self.URL + self.cars_url,
@@ -117,10 +118,10 @@ class GetCarsPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[1]['name']
-            password = cars_app.USER_LIST[1]['password']
+            username = USER_LIST[1]['name']
+            password = USER_LIST[1]['password']
             self.assertEqual("non_admin",
-                             cars_app.USER_LIST[1]['perm'])
+                             USER_LIST[1]['perm'])
 
         with allure.step("Send GET request"):
             response = requests.get(self.URL +
@@ -148,10 +149,10 @@ class GetCarsPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[0]['name']
-            password = cars_app.USER_LIST[0]['password']
+            username = USER_LIST[0]['name']
+            password = USER_LIST[0]['password']
             self.assertEqual("admin",
-                             cars_app.USER_LIST[0]['perm'])
+                             USER_LIST[0]['perm'])
 
         with allure.step("Send GET request"):
             response = requests.get(self.URL +
@@ -179,10 +180,10 @@ class GetCarsPositiveTestCase(BaseTestCase):
         allure.dynamic.severity(allure.severity_level.BLOCKER)
 
         with allure.step("Verify user permissions"):
-            username = cars_app.USER_LIST[1]['name']
-            password = cars_app.USER_LIST[1]['password']
+            username = USER_LIST[1]['name']
+            password = USER_LIST[1]['password']
             self.assertEqual("non_admin",
-                             cars_app.USER_LIST[1]['perm'])
+                             USER_LIST[1]['perm'])
 
         with allure.step("Prepare expected results"):
             car = {"brand": "Maruti",
