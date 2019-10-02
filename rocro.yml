@@ -4,5 +4,6 @@ inspecode:
     runtime:
       python: 3.6.0
   pycodestyle: default
-  pylint: default
+  pylint:
+    ignore: 'docs\*'
   pytest: default
