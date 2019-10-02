@@ -13,8 +13,6 @@ import platform
 import time
 import unittest
 import allure
-
-
 # from utils.get_args_from_cli import get_args
 
 
