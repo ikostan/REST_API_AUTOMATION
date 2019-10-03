@@ -76,6 +76,14 @@ tests.delete\_car\_positive\_test module
    :undoc-members:
    :show-inheritance:
 
+tests.internal\_func\_positive\_test module
+--------------------------------------
+
+.. automodule:: tests.internal_func_positive_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
