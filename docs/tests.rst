@@ -1,97 +1,14 @@
 tests package
 =============
 
-Submodules
-----------
+Subpackages
+-----------
 
-tests.base\_test module
------------------------
+.. toctree::
 
-.. automodule:: tests.base_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.get\_cars\_negative\_test module
---------------------------------------
-
-.. automodule:: tests.get_cars_negative_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.get\_cars\_positive\_test module
---------------------------------------
-
-.. automodule:: tests.get_cars_positive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.post\_cars\_positive\_test module
----------------------------------------
-
-.. automodule:: tests.post_cars_positive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.post\_cars\_negative\_test module
----------------------------------------
-
-.. automodule:: tests.post_cars_negative_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.put\_cars\_negaive\_test module
--------------------------------------
-
-.. automodule:: tests.put_cars_negaive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.put\_cars\_positive\_test module
---------------------------------------
-
-.. automodule:: tests.put_cars_positive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.delete\_car\_negaive\_test module
--------------------------------------
-
-.. automodule:: tests.delete_car_negative_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.delete\_car\_positive\_test module
---------------------------------------
-
-.. automodule:: tests.delete_car_positive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.internal\_func\_positive\_test module
---------------------------------------
-
-.. automodule:: tests.internal_func_positive_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-tests.internal\_func\_negative\_test module
---------------------------------------
-
-.. automodule:: tests.internal_func_negative_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
+   tests.integration
+   tests.system
+   tests.unit
 
 Module contents
 ---------------
