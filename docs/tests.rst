@@ -60,6 +60,21 @@ tests.put\_cars\_positive\_test module
    :undoc-members:
    :show-inheritance:
 
+tests.delete\_car\_negaive\_test module
+-------------------------------------
+
+.. automodule:: tests.delete_car_negative_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.delete\_car\_positive\_test module
+--------------------------------------
+
+.. automodule:: tests.delete_car_positive_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 Module contents
 ---------------
