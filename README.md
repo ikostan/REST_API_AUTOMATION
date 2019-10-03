@@ -55,6 +55,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - [Practice API automation](http://35.167.62.251/)
 - [Flask](https://www.fullstackpython.com/flask.html)
 - [Practice REST API automation with Python 3’s documentation](https://practice-rest-api-automation-with-python-3.readthedocs.io/en/latest/?badge=latest)
+- [Testing Flask Applications](https://flask.palletsprojects.com/en/1.0.x/testing/)
 
 ### Additional Tech Info Resources<br/>
 <a id="additional_tech_info_resources"></a>
@@ -65,6 +66,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 - [Automated REST API Testing with Python](https://dev.to/dowenb/automated-rest-api-testing-with-python-2jm5)
 - [Writing Unit Tests for REST API in Python](https://hackernoon.com/writing-unit-tests-for-rest-api-in-python-web-application-2e675a601a53)
 - [Guide-to automating API tests using Python](https://www.grossum.com/blog/beginner-s-guide-to-automating-api-tests-using-python)
+- [Testing Flask application with basic authentication](https://gist.github.com/jarus/1160696)
 
 ### Dev Environment:<br/>
 <a id="dev_env"></a>
