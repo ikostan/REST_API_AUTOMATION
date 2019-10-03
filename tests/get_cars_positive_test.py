@@ -72,8 +72,8 @@ class GetCarsPositiveTestCase(BaseTestCase):
             self.assertTrue(response.json()['successful'])
 
         with allure.step("Verify retrieved cars list"):
-            self.assertListEqual(self.CARS_LIST,
-                                 response.json()['cars_list'])
+            self.assertTrue(all(True for car in self.CARS_LIST
+                                if car in response.json()['cars_list']))
 
     def test_get_list_of_cars_non_admin(self):
         """
@@ -104,8 +104,8 @@ class GetCarsPositiveTestCase(BaseTestCase):
             self.assertTrue(response.json()['successful'])
 
         with allure.step("Verify retrieved cars list"):
-            self.assertListEqual(self.CARS_LIST,
-                                 response.json()['cars_list'])
+            self.assertTrue(all(True for car in self.CARS_LIST
+                                if car in response.json()['cars_list']))
 
     def test_get_list_of_cars_non_admin_sedan(self):
         """
@@ -134,9 +134,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
             self.assertEqual(200,
                              response.status_code)
 
-        with allure.step("Verify retrieved cars list"):
-            self.assertListEqual(self.CARS_SEDAN,
-                                 response.json()['cars'])
+        with allure.step("Verify retrieved cars list of type sedan"):
+            self.assertTrue(all(True for car in self.CARS_SEDAN
+                                if car in response.json()['cars']))
 
     def test_get_list_of_cars_admin_hatchback(self):
         """
@@ -165,9 +165,9 @@ class GetCarsPositiveTestCase(BaseTestCase):
             self.assertEqual(200,
                              response.status_code)
 
-        with allure.step("Verify retrieved cars list"):
-            self.assertListEqual(self.CARS_HATCHBACK,
-                                 response.json()['cars'])
+        with allure.step("Verify retrieved cars list of type hatchback"):
+            self.assertTrue(all(True for car in self.CARS_HATCHBACK
+                                if car in response.json()['cars']))
 
     def test_get_car_by_name_non_admin_swift(self):
         """
@@ -205,6 +205,5 @@ class GetCarsPositiveTestCase(BaseTestCase):
         with allure.step("Verify 'successful' flag"):
             self.assertTrue(response.json()['successful'])
 
-        with allure.step("Verify retrieved car data"):
-            self.assertDictEqual(car,
-                                 response.json()['car'])
+        with allure.step("Verify retrieved car"):
+            self.assertTrue(car == response.json()['car'])
