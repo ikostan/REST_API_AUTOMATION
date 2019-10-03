@@ -84,6 +84,15 @@ tests.internal\_func\_positive\_test module
    :undoc-members:
    :show-inheritance:
 
+tests.internal\_func\_negative\_test module
+--------------------------------------
+
+.. automodule:: tests.internal_func_negative_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
 Module contents
 ---------------
 
