@@ -9,7 +9,7 @@ python:
 
 env:
   global:
-    - CC_TEST_REPORTER_ID=a9235ff1dface4544cdc753cd5ff7baa613bc354d3153b8f6bdbc9a642b6b60c
+    - CC_TEST_REPORTER_ID=9cc8a024979648e0ea1d1e65619f25e61dfcf66c9748402fac9ee9a66feb6745
 
 install:
     - "pip install -r requirements.txt"
