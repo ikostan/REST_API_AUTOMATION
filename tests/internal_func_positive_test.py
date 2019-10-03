@@ -1,7 +1,7 @@
 #!/path/to/interpreter
 
 """
-Flask App REST API testing: GET
+Flask App REST API testing: Unit Tests
 """
 
 #  Created by Egor Kostan.
@@ -23,8 +23,15 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls) -> None:
-		cls.admin_user = {"name": "qxf2", "password": "qxf2", "perm": "admin"}
-		cls.non_admin_user = {"name": "jack", "password": "qxf2", "perm": "non_admin"}
+
+		with allure.step("Arrange test data"):
+			cls.admin_user = {"name": "qxf2",
+			                  "password": "qxf2",
+			                  "perm": "admin"}
+
+			cls.non_admin_user = {"name": "jack",
+			                      "password": "qxf2",
+			                      "perm": "non_admin"}
 
 	def test_check_auth_admin(self):
 
@@ -38,12 +45,27 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 			self.assertTrue(check_auth(username=self.non_admin_user["name"],
 			                           password=self.non_admin_user["password"]))
 
-	def test_authenticate_error(self):
+	def test_authenticate_error_flag_true(self):
 
 		with app.app_context():
 
 			with allure.step("Arrange authenticate_error response"):
 				response = authenticate_error(auth_flag=True)
+
+			with allure.step("Verify status code"):
+				self.assertEqual(401,
+				                 response.status_code)
+
+			with allure.step("Verify header"):
+				self.assertEqual('Basic realm="Example"',
+				                 response.headers['WWW-Authenticate'])
+
+	def test_authenticate_error_flag_false(self):
+
+		with app.app_context():
+
+			with allure.step("Arrange authenticate_error response"):
+				response = authenticate_error(auth_flag=False)
 
 			with allure.step("Verify status code"):
 				self.assertEqual(401,
