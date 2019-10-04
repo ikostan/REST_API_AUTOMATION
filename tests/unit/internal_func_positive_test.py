@@ -33,6 +33,29 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 			                      "password": "qxf2",
 			                      "perm": "non_admin"}
 
+	def test_debug_mode(self):
+		"""
+		Whether debug mode is enabled.
+
+		When using flask run to start the development server,
+		an interactive debugger will be shown for unhandled exceptions,
+		and the server will be reloaded when code changes.
+		The debug attribute maps to this config key. This is enabled
+		when ENV is 'development' and is overridden by the FLASK_DEBUG
+		environment variable. It may not behave as expected if set in code.
+
+		Do not enable debug mode when deploying in production.
+
+		Default: True if ENV is 'development', or False otherwise.
+		:return:
+		"""
+
+		allure.dynamic.title("API flags validation")
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
+		with allure.step("Verify DEBUG flag"):
+			self.assertFalse(app.config['DEBUG'])
+
 	def test_check_auth_admin(self):
 
 		with allure.step("Verify check_auth flag using admin user"):
