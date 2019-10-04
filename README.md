@@ -49,6 +49,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 ### Official Documentation Sources<br/>
 <a id="official_documentation_sources"></a>
 
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 - [Designing a RESTful API with Python and Flask](https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask)
 - [Allure Test Report](http://allure.qatools.ru/)
 - [cars-api](https://github.com/qxf2/cars-api)
