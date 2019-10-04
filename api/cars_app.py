@@ -168,7 +168,9 @@ def get_car():
     """this will help test GET with url params"""
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
-    if car_name != "" and car_name is not None and brand != "" and brand is not None:
+    if car_name != "" and \
+            car_name is not None and \
+            brand != "" and brand is not None:
         car = [car for car in CARS_LIST if car['name'] == car_name]
         if len(car) == 0:
             resp = jsonify({'message': 'No car found',
@@ -187,7 +189,7 @@ def get_car():
 @requires_auth
 def add_car():
     """this will help test POST without url params"""
-    if not request.json or not 'name' in request.json:
+    if not request.json or 'name' not in request.json:
         resp = jsonify({'message': 'Not a json',
                         'successful': False, }), 400
     car = {
@@ -209,7 +211,7 @@ def update_car(name):
     resp = {}
     car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) != 0:
-        if not request.json or not 'name' in request.json:
+        if not request.json or 'name' not in request.json:
             resp['message'], resp['successful'] = 'Not a json'
             status_code = 404
         else:
