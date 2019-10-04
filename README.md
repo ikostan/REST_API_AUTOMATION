@@ -60,6 +60,7 @@ An API, or Application Program Interface, enables developers to integrate one ap
 ### Additional Tech Info Resources<br/>
 <a id="additional_tech_info_resources"></a>
 
+- [REST API Tutorial](https://restfulapi.net)
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)
 - [Allure Framework](https://docs.qameta.io/allure/)
