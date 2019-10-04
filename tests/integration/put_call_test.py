@@ -54,32 +54,6 @@ class PutCallTestCase(unittest.TestCase):
 			                   "password": "qxf2",
 			                   "perm": "admin"}
 
-	def tearDown(self) -> None:
-		pass
-
-	def test_debug_mode(self):
-		"""
-		Whether debug mode is enabled.
-
-		When using flask run to start the development server,
-		an interactive debugger will be shown for unhandled exceptions,
-		and the server will be reloaded when code changes.
-		The debug attribute maps to this config key. This is enabled
-		when ENV is 'development' and is overridden by the FLASK_DEBUG
-		environment variable. It may not behave as expected if set in code.
-
-		Do not enable debug mode when deploying in production.
-
-		Default: True if ENV is 'development', or False otherwise.
-		:return:
-		"""
-
-		allure.dynamic.title("API flags validation")
-		allure.dynamic.severity(allure.severity_level.CRITICAL)
-
-		with allure.step("Verify DEBUG flag"):
-			self.assertFalse(app.config['DEBUG'])
-
 	def test_put_cars_update_non_admin(self):
 		"""
 		Test PUT call using non admin user credentials.
