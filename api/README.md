@@ -2,6 +2,11 @@
 
 A sample REST application to help testers learn to write API automation 
 
+## What is REST
+REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000 in his famous [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).
+
+Like any other architectural style, REST also does have it’s own [6 guiding constraints](https://restfulapi.net/rest-architectural-constraints/) which must be satisfied if an interface needs to be referred as RESTful. These principles are listed below.
+
 ----
 ### RUN
 -----
