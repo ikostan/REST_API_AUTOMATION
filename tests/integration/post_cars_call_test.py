@@ -97,8 +97,7 @@ class PostCarsCallTestCase(unittest.TestCase):
 			self.assertTrue(data['successful'])
 
 		with allure.step("Verify new car data"):
-			self.assertDictEqual(self.new_car,
-			                     data['car'])
+			self.assertDictEqual(self.new_car, data['car'])
 
 	def test_post_car_admin(self):
 		"""
@@ -139,5 +138,4 @@ class PostCarsCallTestCase(unittest.TestCase):
 			self.assertTrue(data['successful'])
 
 		with allure.step("Verify new car data"):
-			self.assertDictEqual(self.car_updated,
-			                     data['car'])
+			self.assertDictEqual(self.new_car, data['car'])
