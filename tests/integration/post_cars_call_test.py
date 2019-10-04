@@ -43,8 +43,7 @@ class PostCarsCallTestCase(unittest.TestCase):
     """
 
     def setUp(self) -> None:
-            with allure.step("Prepare test data"):
-
+        with allure.step("Prepare test data"):
             self.new_car = {"name": "Punto",
                             "brand": "Fiat",
                             "price_range": "1-3 lacs",
