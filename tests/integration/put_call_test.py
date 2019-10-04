@@ -26,6 +26,10 @@ class PutCallTestCase(unittest.TestCase):
 	otherwise create operation should happen if Request-URI is a
 	valid resource URI (assuming client is allowed to determine
 	resource identifier).
+
+	Use PUT when you want to modify a singular resource
+	which is already a part of resources collection.
+	PUT replaces the resource in its entirety.
 	"""
 
 	def setUp(self) -> None:
@@ -78,9 +82,7 @@ class PutCallTestCase(unittest.TestCase):
 
 	def test_put_cars_update_non_admin(self):
 		"""
-		Use PUT when you want to modify a singular resource
-		which is already a part of resources collection.
-		PUT replaces the resource in its entirety.
+		Test PUT call using non admin user credentials.
 		:return:
 		"""
 
@@ -123,9 +125,7 @@ class PutCallTestCase(unittest.TestCase):
 
 	def test_put_cars_update_admin(self):
 		"""
-		Use PUT when you want to modify a singular resource
-		which is already a part of resources collection.
-		PUT replaces the resource in its entirety.
+		Test PUT call using admin user credentials.
 		:return:
 		"""
 
