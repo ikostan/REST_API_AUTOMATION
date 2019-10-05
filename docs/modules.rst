@@ -5,6 +5,6 @@ REST_API_AUTOMATION
    :maxdepth: 4
 
    api
+   data
    tests
    utils
-   data
