@@ -22,6 +22,8 @@ import random
 import flask
 from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
+from api.cars import Cars
+from api.users import Users
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
@@ -32,35 +34,9 @@ file_handler = logging.FileHandler('log/app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 
-CARS_LIST = [{"name": "Swift",
-              "brand": "Maruti",
-              "price_range": "3-5 lacs",
-              "car_type": "hatchback"},
-             {"name": "Creta",
-              "brand": "Hyundai",
-              "price_range": "8-14 lacs",
-              "car_type": "hatchback"},
-             {"name": "City",
-              "brand": "Honda",
-              "price_range": "3-6 lacs",
-              "car_type": "sedan"},
-             {"name": "Vento", "brand":
-                 "Volkswagen",
-              "price_range": "7-10 lacs",
-              "car_type": "sedan"}]
+CARS_LIST = Cars().get_cars()
 
-USER_LIST = [{"name": "qxf2",
-              "password": "qxf2",
-              "perm": "admin"},
-             {"name": "eric",
-              "password": "testqxf2",
-              "perm": "non_admin"},
-             {"name": "morgan",
-              "password": "testqxf2",
-              "perm": "non_admin"},
-             {"name": "jack",
-              "password": "qxf2",
-              "perm": "non_admin"}]
+USER_LIST = Users().get_users()
 
 REGISTERED_CARS = []
 
