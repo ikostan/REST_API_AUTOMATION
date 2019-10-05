@@ -60,6 +60,14 @@ tests.system.post\_cars\_positive\_test module
    :undoc-members:
    :show-inheritance:
 
+tests.system.post\_register\_positive\_test module
+--------------------------------------------------
+
+.. automodule:: tests.system.post_register_positive_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 tests.system.put\_cars\_negaive\_test module
 --------------------------------------------
 
