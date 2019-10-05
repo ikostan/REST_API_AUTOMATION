@@ -244,22 +244,19 @@ def remove_car(name):
 @app.route('/register/car', methods=['POST'])
 @requires_auth
 def register_car():
-    """this will help test GET and
-    POST with dynamic numbers in url"""
+    """this will help test GET and POST with dynamic numbers in url"""
+    # print("\nPOST debug: {}\n".format(request.args))
+    # print("\nCars list: {}\n".format(CARS_LIST))
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
-    if car_name != "" and \
-            car_name is not None and brand != "" and \
-            brand is not None:
+    if car_name != "" and car_name is not None and brand != "" and brand is not None:
         car = [car for car in CARS_LIST if car['name'] == car_name]
     customer_details = {
         'customer_name': request.json['customer_name'],
         'city': request.json['city']
     }
-    registered_car = {'car': car[0],
-                      'customer_details': request.json,
-                      'registration_token': random.randrange(0, 4),
-                      'successful': True}
+    registered_car = {'car': car[0], 'customer_details': request.json,
+                      'registration_token': random.randrange(0, 4), 'successful': True}
     REGISTERED_CARS.append(registered_car)
 
     return jsonify({'registered_car': registered_car})
