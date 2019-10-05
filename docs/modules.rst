@@ -7,3 +7,4 @@ REST_API_AUTOMATION
    api
    tests
    utils
+   data
