@@ -19,11 +19,12 @@ Source: https://github.com/qxf2/cars-api
 import os
 import logging
 import random
+import sys
 import flask
 from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
-import data.cars as c
-import data.users as u
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
@@ -34,9 +35,26 @@ file_handler = logging.FileHandler('log/app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 
-CARS_LIST = c.Cars().get_cars()
+try:
+    from data.cars import Cars
+    from data.users import Users
+    CARS_LIST = Cars().get_cars()
+    USER_LIST = Users().get_users()
+except ModuleNotFoundError as e:
+    print("\nERROR:\n{}\n".format(e))
 
-USER_LIST = u.Users().get_users()
+except ImportError as e:
+    print("\nERROR:\n{}\n".format(e))
+
+finally:
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    cwd = os.getcwd()
+    full_path = os.path.realpath(__file__)
+
+    print("\ndir_path:\n{}\n".format(dir_path))
+    print("\ncwd:\n{}\n".format(cwd))
+    print("\nfull_path:\n{}\n".format(full_path))
+
 
 REGISTERED_CARS = []
 
