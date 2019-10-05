@@ -25,6 +25,8 @@ from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from data.cars import Cars
+from data.users import Users
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
@@ -35,16 +37,9 @@ file_handler = logging.FileHandler('log/app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 
-try:
-    from data.cars import Cars
-    from data.users import Users
-    CARS_LIST = Cars().get_cars()
-    USER_LIST = Users().get_users()
-except ModuleNotFoundError as e:
-    print("\nERROR:\n{}\n".format(e))
+CARS_LIST = Cars().get_cars()
+USER_LIST = Users().get_users()
 
-except ImportError as e:
-    print("\nERROR:\n{}\n".format(e))
 
 finally:
     dir_path = os.path.dirname(os.path.realpath(__file__))
