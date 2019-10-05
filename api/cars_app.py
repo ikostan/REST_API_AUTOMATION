@@ -22,8 +22,8 @@ import random
 import flask
 from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
-from api.cars import Cars
-from api.users import Users
+from api.data.cars import Cars
+from api.data.users import Users
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
