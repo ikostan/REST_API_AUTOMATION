@@ -39,18 +39,6 @@ app.logger.setLevel(logging.INFO)
 
 CARS_LIST = Cars().get_cars()
 USER_LIST = Users().get_users()
-
-
-finally:
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    cwd = os.getcwd()
-    full_path = os.path.realpath(__file__)
-
-    print("\ndir_path:\n{}\n".format(dir_path))
-    print("\ncwd:\n{}\n".format(cwd))
-    print("\nfull_path:\n{}\n".format(full_path))
-
-
 REGISTERED_CARS = []
 
 
