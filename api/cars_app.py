@@ -17,16 +17,19 @@ Source: https://github.com/qxf2/cars-api
 """
 
 import os
+import sys
 import logging
 import random
-import sys
 import flask
 from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from api.helper import Helper
 from data.cars import Cars
 from data.users import Users
+
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
@@ -41,19 +44,7 @@ CARS_LIST = Cars().get_cars()
 USER_LIST = Users().get_users()
 REGISTERED_CARS = []
 
-
-def check_auth(username, password):
-    """
-    check if the given is valid
-    :param username:
-    :param password:
-    :return:
-    """
-    user = [user for user in USER_LIST if user['name']
-            == username and user['password'] == password]
-    if len(user) == 1:
-        return True
-    return False
+check_auth = Helper.check_auth
 
 
 def authenticate_error(auth_flag):
@@ -79,6 +70,7 @@ def requires_auth(f):
     :param f:
     :return:
     """
+
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.authorization
@@ -87,9 +79,10 @@ def requires_auth(f):
         if not auth:
             auth_flag = False
             return authenticate_error(auth_flag)
-        elif not check_auth(auth.username, auth.password):
+        elif not check_auth(auth.username, auth.password, USER_LIST):
             return authenticate_error(auth_flag)
         return f(*args, **kwargs)
+
     return decorated
 
 
