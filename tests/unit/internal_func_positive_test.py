@@ -11,6 +11,7 @@ Flask App REST API testing: Unit Tests
 import allure
 import unittest
 from api.cars_app import app, check_auth, authenticate_error
+from data.users import Users
 
 
 @allure.epic('Simple Flask App')
@@ -60,13 +61,15 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 
 		with allure.step("Verify check_auth flag using admin user"):
 			self.assertTrue(check_auth(username=self.admin_user["name"],
-			                           password=self.admin_user["password"]))
+			                           password=self.admin_user["password"],
+			                           user_list=Users().get_users()))
 
 	def test_check_auth_non_admin(self):
 
 		with allure.step("Verify check_auth flag using non admin user"):
 			self.assertTrue(check_auth(username=self.non_admin_user["name"],
-			                           password=self.non_admin_user["password"]))
+			                           password=self.non_admin_user["password"],
+			                           user_list=Users().get_users()))
 
 	def test_authenticate_error_flag_true(self):
 
