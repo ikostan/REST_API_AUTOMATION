@@ -10,7 +10,8 @@ Flask App REST API testing: Unit Tests
 
 import allure
 import unittest
-from api.cars_app import check_auth
+
+from api.authentication_helper import AuthenticationHelper
 from data.users import Users
 
 
@@ -24,7 +25,6 @@ class InternalFuncNegativeTestCase(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls) -> None:
-
 		with allure.step("Arrange test data"):
 			cls.admin_user = {"name": "qxf2",
 			                  "password": "123",
@@ -35,15 +35,13 @@ class InternalFuncNegativeTestCase(unittest.TestCase):
 			                      "perm": "non_admin"}
 
 	def test_check_auth_wrong_admin(self):
-
 		with allure.step("Verify check_auth flag using admin user"):
-			self.assertFalse(check_auth(username=self.admin_user["name"],
-			                            password=self.admin_user["password"],
-			                            user_list=Users().get_users()))
+			self.assertFalse(AuthenticationHelper.check_auth(username=self.admin_user["name"],
+			                                                 password=self.admin_user["password"],
+			                                                 user_list=Users().get_users()))
 
 	def test_check_auth_wrong_non_admin(self):
-
 		with allure.step("Verify check_auth flag using non admin user"):
-			self.assertFalse(check_auth(username=self.non_admin_user["name"],
-			                            password=self.non_admin_user["password"],
-			                            user_list=Users().get_users()))
+			self.assertFalse(AuthenticationHelper.check_auth(username=self.non_admin_user["name"],
+			                                                 password=self.non_admin_user["password"],
+			                                                 user_list=Users().get_users()))
