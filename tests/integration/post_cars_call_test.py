@@ -12,7 +12,7 @@ import base64
 import allure
 import unittest
 from flask import json
-from api.cars_app import app, CARS_LIST
+from api.cars_app import app
 
 
 @allure.epic('Simple Flask App')
