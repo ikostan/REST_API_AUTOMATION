@@ -12,6 +12,14 @@ api.cars\_app module
    :undoc-members:
    :show-inheritance:
 
+api.cars\_authentication\_helper
+--------------------
+
+.. automodule:: api.authentication_helper
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------
