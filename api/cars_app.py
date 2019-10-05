@@ -26,7 +26,7 @@ from flask import Flask, request, jsonify, abort, render_template
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from api.helper import Helper
+from api.authentication_helper import AuthenticationHelper
 from data.cars import Cars
 from data.users import Users
 
@@ -44,25 +44,6 @@ CARS_LIST = Cars().get_cars()
 USER_LIST = Users().get_users()
 REGISTERED_CARS = []
 
-check_auth = Helper.check_auth
-
-
-def authenticate_error(auth_flag):
-    """
-    set auth message based on the
-    authentication check result
-    :param auth_flag:
-    :return:
-    """
-    if auth_flag is True:
-        message = {'message': "Authenticate with proper credentials"}
-    else:
-        message = {'message': "Require Basic Authentication"}
-    resp = jsonify(message)
-    resp.status_code = 401
-    resp.headers['WWW-Authenticate'] = 'Basic realm="Example"'
-    return resp
-
 
 def requires_auth(f):
     """
@@ -78,9 +59,9 @@ def requires_auth(f):
 
         if not auth:
             auth_flag = False
-            return authenticate_error(auth_flag)
-        elif not check_auth(auth.username, auth.password, USER_LIST):
-            return authenticate_error(auth_flag)
+            return AuthenticationHelper.authenticate_error(auth_flag)
+        elif not AuthenticationHelper.check_auth(auth.username, auth.password, USER_LIST):
+            return AuthenticationHelper.authenticate_error(auth_flag)
         return f(*args, **kwargs)
 
     return decorated
