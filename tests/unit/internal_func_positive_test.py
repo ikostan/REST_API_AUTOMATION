@@ -10,7 +10,9 @@ Flask App REST API testing: Unit Tests
 
 import allure
 import unittest
-from api.cars_app import app, check_auth, authenticate_error
+
+from api.authentication_helper import AuthenticationHelper
+from api.cars_app import app
 from data.users import Users
 
 
@@ -24,7 +26,6 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls) -> None:
-
 		with allure.step("Arrange test data"):
 			cls.admin_user = {"name": "qxf2",
 			                  "password": "qxf2",
@@ -58,25 +59,21 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 			self.assertFalse(app.config['DEBUG'])
 
 	def test_check_auth_admin(self):
-
 		with allure.step("Verify check_auth flag using admin user"):
-			self.assertTrue(check_auth(username=self.admin_user["name"],
-			                           password=self.admin_user["password"],
-			                           user_list=Users().get_users()))
+			self.assertTrue(AuthenticationHelper.check_auth(username=self.admin_user["name"],
+			                                                password=self.admin_user["password"],
+			                                                user_list=Users().get_users()))
 
 	def test_check_auth_non_admin(self):
-
 		with allure.step("Verify check_auth flag using non admin user"):
-			self.assertTrue(check_auth(username=self.non_admin_user["name"],
-			                           password=self.non_admin_user["password"],
-			                           user_list=Users().get_users()))
+			self.assertTrue(AuthenticationHelper.check_auth(username=self.non_admin_user["name"],
+			                                                password=self.non_admin_user["password"],
+			                                                user_list=Users().get_users()))
 
 	def test_authenticate_error_flag_true(self):
-
 		with app.app_context():
-
 			with allure.step("Arrange authenticate_error response"):
-				response = authenticate_error(auth_flag=True)
+				response = AuthenticationHelper.authenticate_error(auth_flag=True)
 
 			with allure.step("Verify status code"):
 				self.assertEqual(401,
@@ -87,11 +84,9 @@ class InternalFuncPositiveTestCase(unittest.TestCase):
 				                 response.headers['WWW-Authenticate'])
 
 	def test_authenticate_error_flag_false(self):
-
 		with app.app_context():
-
 			with allure.step("Arrange authenticate_error response"):
-				response = authenticate_error(auth_flag=False)
+				response = AuthenticationHelper.authenticate_error(auth_flag=False)
 
 			with allure.step("Verify status code"):
 				self.assertEqual(401,
