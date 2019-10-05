@@ -1,16 +1,12 @@
 """
 cars api is a sample web application developed by
 Qxf2 Services to help testers learn API automation.
-
 This REST application written in Python was built
 solely to help QA learn to write API automation.
-
 The application has endpoints for you to practice
 automating GET, POST, PUT and DELETE methods.
-
 It includes endpoints that use URL parameters,
 jSON payloads, returns different response codes, etc.
-
 We have also included permissioning and authentication
 too to help you write role based API tests.
 
@@ -21,16 +17,15 @@ Source: https://github.com/qxf2/cars-api
 """
 
 import os
-from functools import wraps
 import logging
 import random
 import flask
+from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
 
 app = Flask(__name__)
-"""write logs for app
-   filehandler of logging  module is not creating 
-   log directory if dir does not exist"""
+# write logs for app filehandler of logging  module
+# is not creating log directory if dir does not exist
 if not os.path.exists('log'):
     os.makedirs('log')
 file_handler = logging.FileHandler('log/app.log')
@@ -71,7 +66,12 @@ REGISTERED_CARS = []
 
 
 def check_auth(username, password):
-    "check if the given is valid"
+    """
+    check if the given is valid
+    :param username:
+    :param password:
+    :return:
+    """
     user = [user for user in USER_LIST if user['name']
             == username and user['password'] == password]
     if len(user) == 1:
@@ -91,10 +91,8 @@ def authenticate_error(auth_flag):
     else:
         message = {'message': "Require Basic Authentication"}
     resp = jsonify(message)
-
     resp.status_code = 401
     resp.headers['WWW-Authenticate'] = 'Basic realm="Example"'
-
     return resp
 
 
@@ -104,7 +102,6 @@ def requires_auth(f):
     :param f:
     :return:
     """
-
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.authorization
@@ -116,13 +113,12 @@ def requires_auth(f):
         elif not check_auth(auth.username, auth.password):
             return authenticate_error(auth_flag)
         return f(*args, **kwargs)
-
     return decorated
 
 
 def requires_perm():
     """
-    check if the autheticated user has a admin permission
+    check if the authenticated user has a admin permission
     :return:
     """
     auth = request.authorization
@@ -136,14 +132,20 @@ def requires_perm():
 
 @app.route("/", methods=["GET"])
 def index_page():
-    """this will help test GET without url params"""
+    """
+    this will help test GET without url params
+    :return:
+    """
     return render_template('index.html')
 
 
 @app.route("/cars", methods=["GET"])
 @requires_auth
 def get_cars():
-    """this will help test GET without url params"""
+    """
+    this will help test GET without url params
+    :return:
+    """
     return flask.jsonify({"cars_list": CARS_LIST,
                           'successful': True})
 
@@ -151,7 +153,11 @@ def get_cars():
 @app.route("/cars/<name>", methods=["GET"])
 @requires_auth
 def get_car_details(name):
-    """this will help test GET with url params"""
+    """
+    this will help test GET with url params
+    :param name:
+    :return:
+    """
     car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) == 0:
         resp = jsonify({'message': 'No car found',
@@ -165,7 +171,10 @@ def get_car_details(name):
 @app.route("/cars/find", methods=["GET"])
 @requires_auth
 def get_car():
-    """this will help test GET with url params"""
+    """
+    this will help test GET with url params
+    :return:
+    """
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
     if car_name != "" and \
@@ -181,14 +190,16 @@ def get_car():
         resp = jsonify(
             {'message': 'Not enough url_params',
              'successful': False})
-
     return resp
 
 
 @app.route("/cars/add", methods=["POST"])
 @requires_auth
 def add_car():
-    """this will help test POST without url params"""
+    """
+    this will help test POST without url params
+    :return:
+    """
     if not request.json or 'name' not in request.json:
         resp = jsonify({'message': 'Not a json',
                         'successful': False, }), 400
@@ -200,14 +211,17 @@ def add_car():
     }
     CARS_LIST.append(car)
     resp = jsonify({'car': car, 'successful': True}), 200
-
     return resp
 
 
 @app.route("/cars/update/<name>", methods=["PUT"])
 @requires_auth
 def update_car(name):
-    """this will help test PUT """
+    """
+    this will help test PUT
+    :param name:
+    :return:
+    """
     resp = {}
     car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) != 0:
@@ -225,28 +239,31 @@ def update_car(name):
     else:
         resp['message'], resp['successful'] = 'No car found', False
         status_code = 404
-
     return jsonify({'response': resp}), status_code
 
 
 @app.route("/cars/remove/<name>", methods=["DELETE"])
 @requires_auth
 def remove_car(name):
-    """this will help test DELETE"""
+    """
+    this will help test DELETE
+    :param name:
+    :return:
+    """
     car = [car for car in CARS_LIST if car['name'] == name]
     if len(car) == 0:
         abort(404)
     CARS_LIST.remove(car[0])
-
     return jsonify({'car': car[0], 'successful': True}), 200
 
 
 @app.route('/register/car', methods=['POST'])
 @requires_auth
 def register_car():
-    """this will help test GET and POST with dynamic numbers in url"""
-    # print("\nPOST debug: {}\n".format(request.args))
-    # print("\nCars list: {}\n".format(CARS_LIST))
+    """
+    this will help test GET and POST with dynamic numbers in url
+    :return:
+    """
     car_name = request.args.get('car_name')
     brand = request.args.get('brand')
     if car_name != "" and car_name is not None and brand != "" and brand is not None:
@@ -258,14 +275,16 @@ def register_car():
     registered_car = {'car': car[0], 'customer_details': request.json,
                       'registration_token': random.randrange(0, 4), 'successful': True}
     REGISTERED_CARS.append(registered_car)
-
     return jsonify({'registered_car': registered_car})
 
 
 @app.route('/register/', methods=['GET'])
 @requires_auth
 def get_registered_cars():
-    """this will help test GET without url_params"""
+    """
+    this will help test GET without url_params
+    :return:
+    """
     return jsonify({'registered': REGISTERED_CARS,
                     'successful': True})
 
@@ -273,9 +292,11 @@ def get_registered_cars():
 @app.route('/register/car/delete/', methods=['DELETE'])
 @requires_auth
 def delete_registered_cars():
-    """this will help test delete"""
+    """
+    this will help test delete
+    :return:
+    """
     del REGISTERED_CARS[0]
-
     return jsonify({'successful': True}), 200
 
 
@@ -288,7 +309,6 @@ def filter_cars(car_type):
     :return:
     """
     filtered_list = [car for car in CARS_LIST if car['car_type'] == car_type]
-
     return jsonify({'cars': filtered_list})
 
 
