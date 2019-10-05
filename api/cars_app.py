@@ -22,8 +22,8 @@ import random
 import flask
 from functools import wraps
 from flask import Flask, request, jsonify, abort, render_template
-from data.cars import Cars
-from data.users import Users
+import data.cars as c
+import data.users as u
 
 app = Flask(__name__)
 # write logs for app filehandler of logging  module
@@ -34,9 +34,9 @@ file_handler = logging.FileHandler('log/app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 
-CARS_LIST = Cars().get_cars()
+CARS_LIST = c.Cars().get_cars()
 
-USER_LIST = Users().get_users()
+USER_LIST = u.Users().get_users()
 
 REGISTERED_CARS = []
 
